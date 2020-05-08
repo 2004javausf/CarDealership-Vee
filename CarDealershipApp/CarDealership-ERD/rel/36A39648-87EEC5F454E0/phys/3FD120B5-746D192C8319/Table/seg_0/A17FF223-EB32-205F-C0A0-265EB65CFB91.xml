@@ -1,0 +1,41 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="CAR_TYPE" directorySegmentName="seg_0" id="A17FF223-EB32-205F-C0A0-265EB65CFB91">
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 01:31:13 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<schemaObject>5A7900EC-E988-B0D8-566C-B204CA31503E</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>8287CD4E-B570-3354-2BE6-E5A0EBFB31A0</segment>
+<tableSpace>0B21697E-AEA3-1C31-F6B8-20F4BCCE0514</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="CAR_TYPE_DESC" id="0B5E2A03-3A9A-BF30-F262-46CCB538BF10">
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 01:31:14 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CAR_TYPE_ID" id="8287AFAD-45FF-D0F7-9130-CFC12C002C13">
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 01:31:14 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="CAR_TYPE_PK" id="C9AABD8E-53D8-24D9-3114-9062DEB5997C">
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 01:31:16 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<schemaObject>5A7900EC-E988-B0D8-566C-B204CA31503E</schemaObject>
+<segment>58467FAD-6048-A1FD-61BD-5AFA46EAF2E8</segment>
+<tableSpace>0B21697E-AEA3-1C31-F6B8-20F4BCCE0514</tableSpace>
+<indexSegment>58467FAD-6048-A1FD-61BD-5AFA46EAF2E8</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

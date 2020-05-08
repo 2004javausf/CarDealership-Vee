@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="EMPLOYEE" directorySegmentName="seg_0" id="45CCF42A-01A8-3C18-BE04-DB98ACE22532">
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 01:31:13 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<schemaObject>5A7900EC-E988-B0D8-566C-B204CA31503E</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>8287CD4E-B570-3354-2BE6-E5A0EBFB31A0</segment>
+<tableSpace>0B21697E-AEA3-1C31-F6B8-20F4BCCE0514</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="EMPLOYEE_ID" id="2A33993E-63B5-E79B-7D8F-DA6A72EA34D3">
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 01:31:14 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="LAST_NAME" id="576BAABD-9BCD-D3A8-A4C6-DC6A186DA515">
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 01:31:14 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="USER_ID" id="57B92779-D8FD-66C9-DA7F-ADE9BC021BB5">
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 01:31:14 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="FIRST_NAME" id="694AFF91-5B7A-F4D4-788D-BCCAB0F71ABF">
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 01:31:14 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DESIGNATION" id="AA5F6D3D-E461-FC5E-98D8-E7CC716BDEDF">
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 01:31:14 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PHONE_NUMBER" id="E418FBBB-E4DE-F1A6-5077-6762B56DFEBB">
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 01:31:14 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_EMPLOYEE_USER_INFO" id="3E54F27E-551D-96E5-819C-A7FCF37AC5E1">
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 02:16:28 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="EMPLOYEE_PK" id="07B8658A-5ABD-CE86-890C-0EF4294A75F8">
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 01:31:16 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<schemaObject>5A7900EC-E988-B0D8-566C-B204CA31503E</schemaObject>
+<segment>58467FAD-6048-A1FD-61BD-5AFA46EAF2E8</segment>
+<tableSpace>0B21697E-AEA3-1C31-F6B8-20F4BCCE0514</tableSpace>
+<indexSegment>58467FAD-6048-A1FD-61BD-5AFA46EAF2E8</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

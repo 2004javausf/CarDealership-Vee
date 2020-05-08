@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="CAR" directorySegmentName="seg_0" id="7589726C-B58B-8CB0-254E-0A532F965E28">
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 01:31:12 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<schemaObject>5A7900EC-E988-B0D8-566C-B204CA31503E</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>8287CD4E-B570-3354-2BE6-E5A0EBFB31A0</segment>
+<tableSpace>0B21697E-AEA3-1C31-F6B8-20F4BCCE0514</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="CAR_COLOR" id="095C5DAF-652F-B9C2-DD45-C69573C01418">
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 01:31:13 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CUSTOMER_ID" id="46B56129-5468-0ED2-8431-89D9EA8C1EF2">
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 01:31:13 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CAR_STATUS" id="677A979E-2EA9-569B-0861-B5F89B1B47B8">
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 01:31:13 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CAR_MODEL" id="75E94E02-4011-F437-3BA5-6868666CA343">
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 01:31:13 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CAR_MILAGE" id="8B26C9A2-6E95-4883-D85F-58E0F5E06ED2">
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 01:31:13 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CAR_VALUE" id="A5D3C46E-498A-A445-2C1C-35B43BA4D6FD">
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 01:31:13 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CAR_YEAR" id="BF567B4A-50A7-C455-209B-580CCCD61D95">
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 01:31:13 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CAR_ID" id="E5B8606D-904B-ED8E-DAC1-3311E06E8A64">
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 01:31:13 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="CAR_MAKE" id="F0F25977-5680-5309-C778-D72939BD9D90">
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 01:31:13 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CAR_TYPE_ID" id="FDCC961C-D091-5BB0-729A-CCDA3F593AE0">
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 01:31:13 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_CAR_CAR_TYPE" id="C2647C9A-8559-D39D-5792-6CC320526EBB">
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 02:27:09 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="CAR_PK" id="C21D7E4F-01A5-9EDC-9807-107C6341D2CB">
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 01:31:16 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<schemaObject>5A7900EC-E988-B0D8-566C-B204CA31503E</schemaObject>
+<segment>58467FAD-6048-A1FD-61BD-5AFA46EAF2E8</segment>
+<tableSpace>0B21697E-AEA3-1C31-F6B8-20F4BCCE0514</tableSpace>
+<indexSegment>58467FAD-6048-A1FD-61BD-5AFA46EAF2E8</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

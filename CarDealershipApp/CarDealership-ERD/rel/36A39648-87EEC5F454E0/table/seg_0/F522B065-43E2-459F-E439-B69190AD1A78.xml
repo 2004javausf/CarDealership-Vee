@@ -1,0 +1,201 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F522B065-43E2-459F-E439-B69190AD1A78" schemaObject="5A7900EC-E988-B0D8-566C-B204CA31503E" name="CUSTOMER">
+<sourceConnName>CarDealership-Vee</sourceConnName>
+<sourceObjSchema>VP</sourceObjSchema>
+<sourceObjName>CUSTOMER</sourceObjName>
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 01:31:13 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CUSTOMER_ID" id="6A9D4857-7B0B-16CA-6B43-A905F75AD0D4">
+<sourceConnName>CarDealership-Vee</sourceConnName>
+<sourceObjSchema>CUSTOMER</sourceObjSchema>
+<sourceObjName>CUSTOMER_ID</sourceObjName>
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 01:31:14 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementDisableCache>false</autoIncrementDisableCache>
+<autoIncrementCache>20</autoIncrementCache>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="FIRST_NAME" id="E6FBBFDD-D9E6-5E19-D33D-3755F90ABD79">
+<sourceConnName>CarDealership-Vee</sourceConnName>
+<sourceObjSchema>CUSTOMER</sourceObjSchema>
+<sourceObjName>FIRST_NAME</sourceObjName>
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 01:31:14 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LAST_NAME" id="F116026D-7A0F-8251-481E-6FD979C7FCEC">
+<sourceConnName>CarDealership-Vee</sourceConnName>
+<sourceObjSchema>CUSTOMER</sourceObjSchema>
+<sourceObjName>LAST_NAME</sourceObjName>
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 01:31:14 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STREET" id="7510A9E3-D6EA-9C09-8562-E9DD9719D66D">
+<sourceConnName>CarDealership-Vee</sourceConnName>
+<sourceObjSchema>CUSTOMER</sourceObjSchema>
+<sourceObjName>STREET</sourceObjName>
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 01:31:14 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CITY" id="836E2295-4EF7-8128-C52E-1F3BE15CE9EA">
+<sourceConnName>CarDealership-Vee</sourceConnName>
+<sourceObjSchema>CUSTOMER</sourceObjSchema>
+<sourceObjName>CITY</sourceObjName>
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 01:31:14 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PROVINCE" id="7B03F6FD-2E2E-5D81-F346-FA5E40FB3C30">
+<sourceConnName>CarDealership-Vee</sourceConnName>
+<sourceObjSchema>CUSTOMER</sourceObjSchema>
+<sourceObjName>PROVINCE</sourceObjName>
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 01:31:14 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ZIP_CODE" id="20955017-C848-4CA4-6699-56E7B9F1CB1F">
+<sourceConnName>CarDealership-Vee</sourceConnName>
+<sourceObjSchema>CUSTOMER</sourceObjSchema>
+<sourceObjName>ZIP_CODE</sourceObjName>
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 01:31:14 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PHONE_NUMBER" id="B4DEC530-29C5-8761-D5DF-E0CD8A7219D6">
+<sourceConnName>CarDealership-Vee</sourceConnName>
+<sourceObjSchema>CUSTOMER</sourceObjSchema>
+<sourceObjName>PHONE_NUMBER</sourceObjName>
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 01:31:14 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 BYTE</dataTypeSize>
+<ownDataTypeParameters>15 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USER_ID" id="A6CB0C40-979D-EBFF-3CA5-3BF6FA2AF2F3">
+<sourceConnName>CarDealership-Vee</sourceConnName>
+<sourceObjSchema>CUSTOMER</sourceObjSchema>
+<sourceObjName>USER_ID</sourceObjName>
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 01:31:14 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D030DB41-8E21-606D-347F-804C7FF261A1" referredColumn="3882D25C-C195-4D61-9498-F10FF1C801E8"/>
+</associations>
+</Column>
+<Column name="CREDIT_SCORE" id="9F5FAE35-8642-D830-6592-37688D937DA7">
+<sourceConnName>CarDealership-Vee</sourceConnName>
+<sourceObjSchema>CUSTOMER</sourceObjSchema>
+<sourceObjName>CREDIT_SCORE</sourceObjName>
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 01:31:14 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="426E208C-7716-B957-AE96-1BE5376A227F" schemaObject="5A7900EC-E988-B0D8-566C-B204CA31503E" name="CUSTOMER_PK">
+<sourceConnName>CarDealership-Vee</sourceConnName>
+<sourceObjSchema>VP</sourceObjSchema>
+<sourceObjName>SYS_C005203</sourceObjName>
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 01:31:15 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6A9D4857-7B0B-16CA-6B43-A905F75AD0D4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9A648E9F-A7CA-82E0-7E30-F92C93F365EB" name="FK_CUSTOMER_USER_INFO">
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 02:16:28 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A6CB0C40-979D-EBFF-3CA5-3BF6FA2AF2F3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

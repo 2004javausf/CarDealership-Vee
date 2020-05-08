@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="E6511B80-686E-9C7B-3FCE-4E8B20A9656D" containerWithKeyObject="B3CC8B90-132E-059E-9847-2D42EC730AD3" localFKIndex="232F2EFA-539E-1C3E-C380-9E54BBE46497" name="FK_USER_INFO_USER_TYPE">
+<sourceConnName>CarDealership-Vee</sourceConnName>
+<sourceObjSchema>VP</sourceObjSchema>
+<sourceObjName>FK_USER_INFO_USER_TYPE</sourceObjName>
+<createdBy>SejVee</createdBy>
+<createdTime>2020-05-08 02:16:28 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<importedID>21E85B19-5C04-81CB-2054-6B57039CA929</importedID>
+<referredTableLongName>VP.USER_TYPE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>B37365BA-3ACB-64F2-CD47-8CA3F85AD853</referredTableID>
+<keyObject>6CFEA415-C504-6F6C-EDBF-23FA6A721B13</keyObject>
+<referredKeyID>6CFEA415-C504-6F6C-EDBF-23FA6A721B13</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>USER_TYPE_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,4 +1,4 @@
-# Project 0 - Car Dealership
+# Project 0 : Car Dealership Application
 
 ## Description
 

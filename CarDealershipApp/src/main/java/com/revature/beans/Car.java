@@ -2,81 +2,186 @@ package com.revature.beans;
 
 public class Car {
 	
-	private String make;
-	private String model;
-	private int year;
-	private String color;
-	private int milage;
-	private long price;
+	private long carID;
+	private String carMake;
+	private String carModel;
+	private int carYear;
+	private String carColor;
+	private int carMilage;
+	private double carPrice;
+	private String carStatus;
+	private long customerID;
+	private int carTypeID;
+	private String carTypeDesc;
 	
 	public Car() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Car(String make, String model, int year, String color, int milage, long price) {
+	public Car(int carTypeID, String carTypeDesc) {
 		super();
-		this.make = make;
-		this.model = model;
-		this.year = year;
-		this.color = color;
-		this.milage = milage;
-		this.price = price;
+		this.carTypeID = carTypeID;
+		this.carTypeDesc = carTypeDesc;
+	}
+	
+	public Car(long carID, String carMake, String carModel, int carYear, String carColor, int carMilage,
+			double carPrice, String carTypeDesc) {
+		super();
+		this.carID = carID;
+		this.carMake = carMake;
+		this.carModel = carModel;
+		this.carYear = carYear;
+		this.carColor = carColor;
+		this.carMilage = carMilage;
+		this.carPrice = carPrice;
+		this.carTypeDesc = carTypeDesc;
 	}
 
-	public String getMake() {
-		return make;
+	public Car(long carID, String carMake, String carModel, int carYear, String carColor, int carMilage,
+			double carPrice, String carStatus, long customerID, int carTypeID, String carTypeDesc) {
+		super();
+		this.carID = carID;
+		this.carMake = carMake;
+		this.carModel = carModel;
+		this.carYear = carYear;
+		this.carColor = carColor;
+		this.carMilage = carMilage;
+		this.carPrice = carPrice;
+		this.carStatus = carStatus;
+		this.customerID = customerID;
+		this.carTypeID = carTypeID;
+		this.carTypeDesc = carTypeDesc;
 	}
 
-	public void setMake(String make) {
-		this.make = make;
+	public Car(long carID, String carMake, String carModel, int carYear, String carColor, int carMilage,
+			double carPrice, String carStatus, int carTypeID, String carTypeDesc) {
+		super();
+		this.carID = carID;
+		this.carMake = carMake;
+		this.carModel = carModel;
+		this.carYear = carYear;
+		this.carColor = carColor;
+		this.carMilage = carMilage;
+		this.carPrice = carPrice;
+		this.carStatus = carStatus;
+		this.carTypeID = carTypeID;
+		this.carTypeDesc = carTypeDesc;
+	}
+	
+	public Car(long carID, String carMake, String carModel, int carYear, String carColor, int carMilage,
+			double carPrice, int carTypeID, String carTypeDesc) {
+		super();
+		this.carID = carID;
+		this.carMake = carMake;
+		this.carModel = carModel;
+		this.carYear = carYear;
+		this.carColor = carColor;
+		this.carMilage = carMilage;
+		this.carPrice = carPrice;
+		this.carTypeID = carTypeID;
+		this.carTypeDesc = carTypeDesc;
+	}
+	
+	public long getCarID() {
+		return carID;
 	}
 
-	public String getModel() {
-		return model;
+	public void setCarID(long carID) {
+		this.carID = carID;
 	}
 
-	public void setModel(String model) {
-		this.model = model;
+	public String getCarMake() {
+		return carMake;
 	}
 
-	public int getYear() {
-		return year;
+	public void setCarMake(String carMake) {
+		this.carMake = carMake;
 	}
 
-	public void setYear(int year) {
-		this.year = year;
+	public String getCarModel() {
+		return carModel;
 	}
 
-	public String getColor() {
-		return color;
+	public void setCarModel(String carModel) {
+		this.carModel = carModel;
 	}
 
-	public void setColor(String color) {
-		this.color = color;
+	public int getCarYear() {
+		return carYear;
 	}
 
-	public int getMilage() {
-		return milage;
+	public void setCarYear(int carYear) {
+		this.carYear = carYear;
 	}
 
-	public void setMilage(int milage) {
-		this.milage = milage;
+	public String getCarColor() {
+		return carColor;
 	}
 
-	public long getPrice() {
-		return price;
+	public void setCarColor(String carColor) {
+		this.carColor = carColor;
 	}
 
-	public void setPrice(long price) {
-		this.price = price;
+	public int getCarMilage() {
+		return carMilage;
+	}
+
+	public void setCarMilage(int carMilage) {
+		this.carMilage = carMilage;
+	}
+
+	public double getCarPrice() {
+		return carPrice;
+	}
+
+	public void setCarPrice(double carPrice) {
+		this.carPrice = carPrice;
+	}
+
+	public String getCarStatus() {
+		return carStatus;
+	}
+
+	public void setCarStatus(String carStatus) {
+		this.carStatus = carStatus;
+	}
+
+	public int getCarTypeID() {
+		return carTypeID;
+	}
+
+	public void setCarTypeID(int carTypeID) {
+		this.carTypeID = carTypeID;
+	}
+	
+
+	public long getCustomerID() {
+		return customerID;
+	}
+
+	public void setCustomerID(long customerID) {
+		this.customerID = customerID;
+	}
+
+	public String getCarTypeDesc() {
+		return carTypeDesc;
+	}
+
+	public void setCarTypeDesc(String carTypeDesc) {
+		this.carTypeDesc = carTypeDesc;
 	}
 
 	@Override
 	public String toString() {
-		return "Car [make=" + make + ", model=" + model + ", year=" + year + ", color=" + color + ", milage=" + milage
-				+ ", price=" + price + "]";
+		return "Car [carID=" + carID + ", carMake=" + carMake + ", carModel=" + carModel + ", CarYear=" + carYear
+				+ ", carColor=" + carColor + ", carMilage=" + carMilage + ", carPrice=" + carPrice + ", carStatus="
+				+ carStatus + ", carTypeID=" + carTypeID + ", carTypeDesc=" + carTypeDesc + "]";
 	}
+
+	
+	
+	
 	
 	
 	

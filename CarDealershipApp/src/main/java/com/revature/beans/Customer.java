@@ -2,102 +2,164 @@ package com.revature.beans;
 
 public class Customer {
 	
-	private String fName;
-	private String lName;
-	private String street;
-	private String city;
-	private String province;
-	private int zipCode;
-	private CharSequence phoneNo;
+	private long customerID;
+	private String firstName;
+	private String lastName;
+	private String phoneNo;
+	private String emailID;
+	private long userID;
+	private String userName;
+	private String password;
 	private int creditScore;
+	private int userTypeID;
+	private String userType;
+	
 	
 	public Customer() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
-	public Customer(String fName, String lName, String street, String city, String province, int zipCode,
-			CharSequence phoneNo, int creditScore) {
+	
+	public Customer(long customerID) {
 		super();
-		this.fName = fName;
-		this.lName = lName;
-		this.street = street;
-		this.city = city;
-		this.province = province;
-		this.zipCode = zipCode;
+		this.customerID = customerID;
+	}
+
+	
+
+	public Customer(long customerID, String firstName, String lastName, String phoneNo, String emailID, long userID,
+			String userName, String password, int creditScore, int userTypeID, String userType) {
+		super();
+		this.customerID = customerID;
+		this.firstName = firstName;
+		this.lastName = lastName;
 		this.phoneNo = phoneNo;
+		this.emailID = emailID;
+		this.userID = userID;
+		this.userName = userName;
+		this.password = password;
 		this.creditScore = creditScore;
+		this.userTypeID = userTypeID;
+		this.userType = userType;
 	}
 
-	public String getfName() {
-		return fName;
+	public long getCustomerID() {
+		return customerID;
 	}
 
-	public void setfName(String fName) {
-		this.fName = fName;
+
+	public void setCustomerID(long customerID) {
+		this.customerID = customerID;
 	}
 
-	public String getlName() {
-		return lName;
+
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setlName(String lName) {
-		this.lName = lName;
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
-	public String getStreet() {
-		return street;
+
+	public String getLastName() {
+		return lastName;
 	}
 
-	public void setStreet(String street) {
-		this.street = street;
-	}
 
-	public String getCity() {
-		return city;
-	}
-
-	public void setCity(String city) {
-		this.city = city;
-	}
-
-	public String getProvince() {
-		return province;
-	}
-
-	public void setProvince(String province) {
-		this.province = province;
-	}
-
-	public int getZipCode() {
-		return zipCode;
-	}
-
-	public void setZipCode(int zipCode) {
-		this.zipCode = zipCode;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
 	public CharSequence getPhoneNo() {
 		return phoneNo;
 	}
 
-	public void setPhoneNo(CharSequence phoneNo) {
+
+	public void setPhoneNo(String phoneNo) {
 		this.phoneNo = phoneNo;
 	}
+
+
+	public String getEmailID() {
+		return emailID;
+	}
+
+
+	public void setEmailID(String emailID) {
+		this.emailID = emailID;
+	}
+
+
+	public long getUserID() {
+		return userID;
+	}
+
+
+	public void setUserID(long userID) {
+		this.userID = userID;
+	}
+
+
+	public String getUserName() {
+		return userName;
+	}
+
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
 
 	public int getCreditScore() {
 		return creditScore;
 	}
 
+
 	public void setCreditScore(int creditScore) {
 		this.creditScore = creditScore;
 	}
 
+	public int getUserTypeID() {
+		return userTypeID;
+	}
+
+	public void setUserTypeID(int userTypeID) {
+		this.userTypeID = userTypeID;
+	}
+
+	public String getUserType() {
+		return userType;
+	}
+
+	public void setUserType(String userType) {
+		this.userType = userType;
+	}
+
 	@Override
 	public String toString() {
-		return "Car [fName=" + fName + ", lName=" + lName + ", street=" + street + ", city=" + city + ", province="
-				+ province + ", zipCode=" + zipCode + ", phoneNo=" + phoneNo + ", creditScore=" + creditScore + "]";
+		return "Customer [customerID=" + customerID + ", firstName=" + firstName + ", lastName=" + lastName
+				+ ", phoneNo=" + phoneNo + ", emailID=" + emailID + ", userID=" + userID + ", userName=" + userName
+				+ ", password=" + password + ", creditScore=" + creditScore + ", userTypeID=" + userTypeID
+				+ ", userType=" + userType + "]";
 	}
+
+	
+	
+
+
+	
+
 	
 
 }

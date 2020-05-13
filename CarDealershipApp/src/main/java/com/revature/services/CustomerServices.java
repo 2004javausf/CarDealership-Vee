@@ -138,35 +138,35 @@ public class CustomerServices {
 				
 				switch(choice) {
 				case 1:		
-					double offerAmount;
-					double downPayment=0;
-					double loanAmount;
+					float offerAmount;
+					float downPayment=0;
+					float loanAmount;
 					int loanMonths;
 					int creditScore;
-					double interestRate;
+					float interestRate;
 	
 					
 					System.out.print("OFFER PRICE: ");
-					offerAmount=in.nextDouble();
+					offerAmount=in.nextFloat();
 					
 					System.out.print("DOWN PAYMENT: ");
-					downPayment=in.nextDouble();
+					downPayment=in.nextFloat();
 					
 					loanAmount=offerAmount-downPayment;
 					creditScore = cdi.getCreditScore(customerID);
 					System.out.println("As per your creditScore, offered price and down payment");
 					
 					if(creditScore<=300) 
-						interestRate = 14.70;
+						interestRate = (float) 14.70;
 					else if(creditScore>300 && creditScore<=500)
-						interestRate = 12.20;
+						interestRate = (float) 12.20;
 					else if(creditScore>500 && creditScore<=650)
-						interestRate = 8.12;
+						interestRate = (float) 8.12;
 					else if(creditScore>650 && creditScore<=800)
-						interestRate = 5.17;
+						interestRate = (float) 5.17;
 					else
-						interestRate = 4.23;
-					double y;
+						interestRate = (float) 4.23;
+					float y;
 					System.out.println("Your loan amount will be $"+loanAmount);
 					System.out.println("MONTHS \tINTEREST \t MoONTHLY PAYMENTS ");
 					System.out.println("---------------------------------------------------------------------------------------------------------------------");

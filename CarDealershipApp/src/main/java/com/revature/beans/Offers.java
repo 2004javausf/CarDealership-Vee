@@ -5,10 +5,10 @@ public class Offers {
 	private long offerID;
 	private  long carID;
 	private long customerID;
-	private double offerAmount;
+	private float offerAmount;
 	private String offerStatus;
-	private double downPayment;
-	private double loanAmount;
+	private float downPayment;
+	private float loanAmount;
 	private long loanID;
 	private  int loanMonths;
 	
@@ -19,8 +19,8 @@ public class Offers {
 	
 	
 	
-	public Offers(long offerID, long carID, long customerID, double offerAmount, String offerStatus, double downPayment,
-			double loanAmount, int loanMonths) {
+	public Offers(long offerID, long carID, long customerID, float offerAmount, String offerStatus, float downPayment,
+			float loanAmount, int loanMonths) {
 		super();
 		this.offerID = offerID;
 		this.carID = carID;
@@ -34,8 +34,8 @@ public class Offers {
 
 
 
-	public Offers(long offerID, long carID, long customerID, double offerAmount, String offerStatus, double downPayment,
-			double loanAmount, long loanID, int loanMonths) {
+	public Offers(long offerID, long carID, long customerID, float offerAmount, String offerStatus, float downPayment,
+			float loanAmount, long loanID, int loanMonths) {
 		super();
 		this.offerID = offerID;
 		this.carID = carID;
@@ -73,11 +73,11 @@ public class Offers {
 		this.customerID = customerID;
 	}
 
-	public double getOfferAmount() {
+	public float getOfferAmount() {
 		return offerAmount;
 	}
 
-	public void setOfferAmount(double offerAmount) {
+	public void setOfferAmount(float offerAmount) {
 		this.offerAmount = offerAmount;
 	}
 
@@ -89,25 +89,25 @@ public class Offers {
 		this.offerStatus = offerStatus;
 	}
 	
-	public double getDownPayment() {
+	public float getDownPayment() {
 		return downPayment;
 	}
 
 
 
-	public void setDownPayment(double downPayment) {
+	public void setDownPayment(float downPayment) {
 		this.downPayment = downPayment;
 	}
 
 
 
-	public double getLoanAmount() {
+	public float getLoanAmount() {
 		return loanAmount;
 	}
 
 
 
-	public void setLoanAmount(double loanAmount) {
+	public void setLoanAmount(float loanAmount) {
 		this.loanAmount = loanAmount;
 	}
 

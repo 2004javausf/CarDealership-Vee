@@ -14,14 +14,14 @@ public interface CarDAO {
 	
 	public void getCarTypes() throws SQLException;
 	
-	public void addCar(int cTypeID,String cMake,String cModel,int cYear,String cColor,long cMilage,double cPrice)throws SQLException;
+	public void addCar(int cTypeID,String cMake,String cModel,int cYear,String cColor,long cMilage,float cPrice)throws SQLException;
 
-	public void addOffer(long carID,long customerID,double offerAmount,double downPayment,double loanAmount,int loanMonths) throws SQLException;
+	public void addOffer(long carID,long customerID,float offerAmount,float downPayment,float loanAmount,int loanMonths) throws SQLException;
 	public List<Offers> getPendingOffers() throws SQLException;
 	
 	public void getCarInfo(long carID) throws SQLException;
 	
-	public void acceptOffer(long offerID, long carID, long customerID,double offerAmount,double downPayment,double loanAmount,int months,double interestRate,double mPayments) throws SQLException;
+	public void acceptOffer(long offerID, long carID, long customerID,float offerAmount,float downPayment,float loanAmount,int months,float interestRate,float mPayments) throws SQLException;
 
 	public void doLoanPayment(long carID) throws SQLException;
 	

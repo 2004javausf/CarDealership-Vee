@@ -10,6 +10,7 @@ import com.revature.beans.User;
 import com.revature.daoimpl.CarDAOImpl;
 import com.revature.daoimpl.CustomerDAOImpl;
 import com.revature.daoimpl.UserDAOImpl;
+import com.revature.util.LogThis;
 
 public class EmployeeServices {
 	Validator v = new Validator();
@@ -73,6 +74,7 @@ public class EmployeeServices {
 		
 		try {
 			userList = udi.CheckLoginInfo(uName, password,2);
+			//LogThis.LogIt("info", "User name or Password invalid!!!!");
 			if(userList.isEmpty()==true) {
 				System.out.println("Username and/or Pasword Invalid!");	
 				System.out.println("[1] CONTINUE AND TRY AGAIN \n[2] EXIT\n\nENTER THE NUMBER [1-2]: ");
@@ -85,7 +87,7 @@ public class EmployeeServices {
 				}
 			}
 			else {
-				
+					//LogThis.LogIt("info", "Loging in successfully!!!");
 					menu.empTransMenu();
 			}
 						
@@ -104,7 +106,7 @@ public class EmployeeServices {
 		int cYear;
 		String cColor;
 		long cMilage;
-		double cPrice;
+		float cPrice;
 		try {
 			
 		System.out.print("Enter Car Make: ");
@@ -123,7 +125,7 @@ public class EmployeeServices {
 		cMilage=in.nextLong();
 		
 		System.out.print("Enter Car Price: ");
-		cPrice=in.nextDouble();
+		cPrice=in.nextFloat();
 		
 		
 		cdi.getCarTypes();
@@ -145,8 +147,8 @@ public class EmployeeServices {
 		CustomerDAOImpl cdi = new CustomerDAOImpl(); 
 		int oid;
 		int creditScore;
-		double interestRate;
-		double monthlyPayments;
+		float interestRate;
+		float monthlyPayments;
 		Menu menu = new Menu();
 		List<Offers> offersList = new ArrayList<Offers>();
 		Offers o = new Offers();
@@ -171,7 +173,7 @@ public class EmployeeServices {
 					}
 				}while( b == true);
 				
-				System.out.println("Do you want to accept any offer from above list? \n [1] YES\n[2] NO \n Enter the number [1-2]: ");
+				System.out.println("Do you want to accept any offer from above list? \n[1] YES\n[2] NO \n Enter the number [1-2]: ");
 				int choice=in.nextInt();
 				
 				switch(choice) {
@@ -185,15 +187,15 @@ public class EmployeeServices {
 					creditScore=cdi.getCreditScore(o.getCustomerID());
 					
 					if(creditScore<=300) 
-						interestRate = 14.70;
+						interestRate = (float) 14.70;
 					else if(creditScore>300 && creditScore<=500)
-						interestRate = 12.20;
+						interestRate = (float) 12.20;
 					else if(creditScore>500 && creditScore<=650)
-						interestRate = 8.12;
+						interestRate = (float) 8.12;
 					else if(creditScore>650 && creditScore<=800)
-						interestRate = 5.17;
+						interestRate = (float) 5.17;
 					else
-						interestRate = 4.23;
+						interestRate = (float) 4.23;
 					
 					monthlyPayments=monthlyPayment(o.getLoanAmount(),interestRate,o.getLoanMonths());
 					carDI.acceptOffer(o.getOfferID(), o.getCarID(), o.getCustomerID(),o.getOfferAmount(),o.getDownPayment(),o.getLoanAmount(),o.getLoanMonths(),interestRate,monthlyPayments);
@@ -215,9 +217,9 @@ public class EmployeeServices {
 		
 	}
 	
-	public static double monthlyPayment(double loanAmount,double interestRate,int months) {
+	public static float monthlyPayment(float loanAmount,float interestRate,int months) {
 		int y = months/12;
-		double mPayment;
+		float mPayment;
 		mPayment = (loanAmount+((loanAmount*interestRate*y)/100))/(months);
 		mPayment=Math.round((mPayment*100.0)/100.0);
 		return mPayment;

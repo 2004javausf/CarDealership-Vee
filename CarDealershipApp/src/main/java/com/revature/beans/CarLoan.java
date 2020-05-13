@@ -5,14 +5,14 @@ public class CarLoan {
 	private long carLoanID;
 	private long carID;
 	private long customerID;
-	private double loanAmount;
-	private double loanInterest;
-	private double TotalAmount;
+	private float loanAmount;
+	private float loanInterest;
+	private float TotalAmount;
 	private int loanMonths;
-	private double monthlyPayment;
-	private double loanPaid;
+	private float monthlyPayment;
+	private float loanPaid;
 	private int paymmentsLeft;
-	private double loanBalance;
+	private float loanBalance;
 	
 	public CarLoan() {
 		super();
@@ -27,7 +27,7 @@ public class CarLoan {
 	}
 
 
-	public CarLoan(double loanAmount, double loanPaid, int paymmentsLeft, double loanBalance) {
+	public CarLoan(float loanAmount, float loanPaid, int paymmentsLeft, float loanBalance) {
 		super();
 		this.loanAmount = loanAmount;
 		this.loanPaid = loanPaid;
@@ -37,7 +37,7 @@ public class CarLoan {
 
 
 
-	public CarLoan(long carLoanID, double monthlyPayment, double loanBalance) {
+	public CarLoan(long carLoanID, float monthlyPayment, float loanBalance) {
 		super();
 		this.carLoanID = carLoanID;
 		this.monthlyPayment = monthlyPayment;
@@ -46,9 +46,9 @@ public class CarLoan {
 
 
 
-	public CarLoan(long carLoanID, long carID, long customerID, double loanAmount, double loanInterest,
-			double totalAmount, int loanMonths, double monthlyPayment, double loanPaid, int paymmentsLeft,
-			double loanBalance) {
+	public CarLoan(long carLoanID, long carID, long customerID, float loanAmount, float loanInterest,
+			float totalAmount, int loanMonths, float monthlyPayment, float loanPaid, int paymmentsLeft,
+			float loanBalance) {
 		super();
 		this.carLoanID = carLoanID;
 		this.carID = carID;
@@ -87,27 +87,27 @@ public class CarLoan {
 		this.customerID = customerID;
 	}
 
-	public double getLoanAmount() {
+	public float getLoanAmount() {
 		return loanAmount;
 	}
 
-	public void setLoanAmount(double loanAmount) {
+	public void setLoanAmount(float loanAmount) {
 		this.loanAmount = loanAmount;
 	}
 
-	public double getLoanInterest() {
+	public float getLoanInterest() {
 		return loanInterest;
 	}
 
-	public void setLoanInterest(double loanInterest) {
+	public void setLoanInterest(float loanInterest) {
 		this.loanInterest = loanInterest;
 	}
 
-	public double getTotalAmount() {
+	public float getTotalAmount() {
 		return TotalAmount;
 	}
 
-	public void setTotalAmount(double totalAmount) {
+	public void setTotalAmount(float totalAmount) {
 		TotalAmount = totalAmount;
 	}
 
@@ -119,19 +119,19 @@ public class CarLoan {
 		this.loanMonths = loanMonths;
 	}
 
-	public double getMonthlyPayment() {
+	public float getMonthlyPayment() {
 		return monthlyPayment;
 	}
 
-	public void setMonthlyPayment(double monthlyPayment) {
+	public void setMonthlyPayment(float monthlyPayment) {
 		this.monthlyPayment = monthlyPayment;
 	}
 
-	public double getLoanPaid() {
+	public float getLoanPaid() {
 		return loanPaid;
 	}
 
-	public void setLoanPaid(double loanPaid) {
+	public void setLoanPaid(float loanPaid) {
 		this.loanPaid = loanPaid;
 	}
 
@@ -143,11 +143,11 @@ public class CarLoan {
 		this.paymmentsLeft = paymmentsLeft;
 	}
 
-	public double getLoanBalance() {
+	public float getLoanBalance() {
 		return loanBalance;
 	}
 
-	public void setLoanBalance(double loanBalance) {
+	public void setLoanBalance(float loanBalance) {
 		this.loanBalance = loanBalance;
 	}
 	

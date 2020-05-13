@@ -8,7 +8,7 @@ public class Car {
 	private int carYear;
 	private String carColor;
 	private int carMilage;
-	private double carPrice;
+	private float carPrice;
 	private String carStatus;
 	private long customerID;
 	private int carTypeID;
@@ -44,7 +44,7 @@ public class Car {
 	}
 
 	public Car(long carID, String carMake, String carModel, int carYear, String carColor, int carMilage,
-			double carPrice, String carTypeDesc) {
+			float carPrice, String carTypeDesc) {
 		super();
 		this.carID = carID;
 		this.carMake = carMake;
@@ -57,7 +57,7 @@ public class Car {
 	}
 
 	public Car(long carID, String carMake, String carModel, int carYear, String carColor, int carMilage,
-			double carPrice, String carStatus, long customerID, int carTypeID, String carTypeDesc) {
+			float carPrice, String carStatus, long customerID, int carTypeID, String carTypeDesc) {
 		super();
 		this.carID = carID;
 		this.carMake = carMake;
@@ -73,7 +73,7 @@ public class Car {
 	}
 
 	public Car(long carID, String carMake, String carModel, int carYear, String carColor, int carMilage,
-			double carPrice, String carStatus, int carTypeID, String carTypeDesc) {
+			float carPrice, String carStatus, int carTypeID, String carTypeDesc) {
 		super();
 		this.carID = carID;
 		this.carMake = carMake;
@@ -88,7 +88,7 @@ public class Car {
 	}
 	
 	public Car(long carID, String carMake, String carModel, int carYear, String carColor, int carMilage,
-			double carPrice, int carTypeID, String carTypeDesc) {
+			float carPrice, int carTypeID, String carTypeDesc) {
 		super();
 		this.carID = carID;
 		this.carMake = carMake;
@@ -149,11 +149,11 @@ public class Car {
 		this.carMilage = carMilage;
 	}
 
-	public double getCarPrice() {
+	public float getCarPrice() {
 		return carPrice;
 	}
 
-	public void setCarPrice(double carPrice) {
+	public void setCarPrice(float carPrice) {
 		this.carPrice = carPrice;
 	}
 

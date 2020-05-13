@@ -4,7 +4,7 @@ public class Payments {
 	
 	private long paymentID;
 	private long carLoanID;
-	private double paymentAmount;
+	private float paymentAmount;
 	private String paymentDate;
 	
 	public Payments() {
@@ -12,7 +12,7 @@ public class Payments {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Payments(long paymentID, long carLoanID, double paymentAmount, String paymentDate) {
+	public Payments(long paymentID, long carLoanID, float paymentAmount, String paymentDate) {
 		super();
 		this.paymentID = paymentID;
 		this.carLoanID = carLoanID;
@@ -36,11 +36,11 @@ public class Payments {
 		this.carLoanID = carLoanID;
 	}
 
-	public double getPaymentAmount() {
+	public float getPaymentAmount() {
 		return paymentAmount;
 	}
 
-	public void setPaymentAmount(double paymentAmount) {
+	public void setPaymentAmount(float paymentAmount) {
 		this.paymentAmount = paymentAmount;
 	}
 

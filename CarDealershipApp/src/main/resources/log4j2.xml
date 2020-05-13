@@ -18,7 +18,7 @@
 
 		</Console>
 
-		<File name="File" fileName="//Users/Jimmy/Desktop/Git/CarDealership-Vee/CarDealershipApp/loggin.log">
+		<File name="File" fileName="C:/Users/Jimmy/Desktop/Git/CarDealership-Vee/CarDealershipApp/Logger.log">
 
 			<PatternLayout>
 

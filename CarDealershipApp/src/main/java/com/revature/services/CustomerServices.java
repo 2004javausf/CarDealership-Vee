@@ -55,6 +55,13 @@ public class CustomerServices {
 		userName=st.nextLine();
 			
 		do {
+			System.out.println("Password criteria:\n"
+			+"Valid Passwords\n" + 
+			"Between 8 and 40 characters long.\n" + 
+			"Contain at least one digit.\n" + 
+			"Contain at least one lower case character.\n" + 
+			"Contain at least one upper case character.\n" + 
+			"Contain at least one special character from [ @ # $ % ! . ].\n");
 			System.out.print("Password: ");
 			password=st.nextLine();
 			b = v.validatePassword(password);
@@ -65,8 +72,8 @@ public class CustomerServices {
 		
 		
 		cdi.addCustomer(firstName,lastName,creditScore,phoneNo,emailID,userName,password,1);
-		//LogThis.LogIt("info", "CUstomer "+firstName+" "+lastName+" added successfully!!!");
-			
+		LogThis.LogIt("info", "CUstomer "+firstName+" "+lastName+" added successfully!!!");
+			System.out.println("CUstomer "+firstName+" "+lastName+" added successfully!!!");
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -108,7 +115,8 @@ public class CustomerServices {
 			else {
 					
 					customerID = cdi.getCustomerID(userList.get(0).getUserID());
-					//LogThis.LogIt("info", "Loging in successfully!!!");
+					LogThis.LogIt("info", uName+"signed in successfully!!!");
+					//System.out.println("Login Sucessfull");
 					menu.custTransMenu();
 			}
 			

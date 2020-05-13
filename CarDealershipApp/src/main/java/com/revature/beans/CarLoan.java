@@ -151,6 +151,12 @@ public class CarLoan {
 		this.loanBalance = loanBalance;
 	}
 	
-	
+	public static float monthlyPayment(float loanAmount,float interestRate,int months) {
+		int y = months/12;
+		float mPayment;
+		mPayment = (loanAmount+((loanAmount*interestRate*y)/100))/(months);
+		mPayment=Math.round((mPayment*100.0)/100.0);
+		return mPayment;
+	}
 
 }

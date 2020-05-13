@@ -164,11 +164,11 @@ public class CarDAOImpl implements CarDAO {
 		call.setLong(2, carID);
 		call.setLong(3, customerID);
 		call.setInt(4, months);
-		call.setFloat(5, Math.round((offerAmount*100.0)/100.0));
-		call.setFloat(6, Math.round((downPayment*100.0)/100.0));
-		call.setFloat(7, Math.round((loanAmount*100.0)/100.0));
+		call.setFloat(5, (float)Math.round((offerAmount*100.0)/100.0));
+		call.setFloat(6, (float)Math.round((downPayment*100.0)/100.0));
+		call.setFloat(7, (float)Math.round((loanAmount*100.0)/100.0));
 		call.setFloat(8, interestRate);
-		call.setFloat(9, Math.round((mPayments*100.0)/100.0));
+		call.setFloat(9, (float)Math.round((mPayments*100.0)/100.0));
 		
 		call.execute();
 		

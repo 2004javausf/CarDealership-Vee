@@ -87,7 +87,8 @@ public class EmployeeServices {
 				}
 			}
 			else {
-					//LogThis.LogIt("info", "Loging in successfully!!!");
+					LogThis.LogIt("info", uName+" signed in successfully!!!");
+					System.out.println("Login Sucessfull");
 					menu.empTransMenu();
 			}
 						
@@ -135,6 +136,7 @@ public class EmployeeServices {
 		cTypeID=in.nextInt();
 		
 		cdi.addCar(cTypeID, cMake, cModel, cYear, cColor, cMilage, cPrice);
+		System.out.println("Car added successfully!!!!");
 		
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -173,13 +175,13 @@ public class EmployeeServices {
 					}
 				}while( b == true);
 				
-				System.out.println("Do you want to accept any offer from above list? \n[1] YES\n[2] NO \n Enter the number [1-2]: ");
+				System.out.println("\n\nDo you want to accept any offer from above list? \n[1] YES\n[2] NO \n Enter the number [1-2]: ");
 				int choice=in.nextInt();
 				
 				switch(choice) {
 				
 				case 1:
-					System.out.println("Which Offer you want to accept for the above car?");
+					System.out.println("\n\nWhich Offer you want to accept for the above car?");
 					System.out.print("Enter the number [1-"+(j-1)+"]: ");
 					oid=in.nextInt();
 					o = offersList.get(oid-1);
@@ -221,7 +223,7 @@ public class EmployeeServices {
 		int y = months/12;
 		float mPayment;
 		mPayment = (loanAmount+((loanAmount*interestRate*y)/100))/(months);
-		mPayment=Math.round((mPayment*100.0)/100.0);
+		mPayment=(float) Math.round((mPayment*100.0)/100.0);
 		return mPayment;
 	}
 	

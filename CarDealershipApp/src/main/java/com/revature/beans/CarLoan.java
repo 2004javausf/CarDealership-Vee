@@ -18,6 +18,33 @@ public class CarLoan {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+	
+
+	public CarLoan(long carLoanID) {
+		super();
+		this.carLoanID = carLoanID;
+	}
+
+
+	public CarLoan(double loanAmount, double loanPaid, int paymmentsLeft, double loanBalance) {
+		super();
+		this.loanAmount = loanAmount;
+		this.loanPaid = loanPaid;
+		this.paymmentsLeft = paymmentsLeft;
+		this.loanBalance = loanBalance;
+	}
+
+
+
+	public CarLoan(long carLoanID, double monthlyPayment, double loanBalance) {
+		super();
+		this.carLoanID = carLoanID;
+		this.monthlyPayment = monthlyPayment;
+		this.loanBalance = loanBalance;
+	}
+
+
 
 	public CarLoan(long carLoanID, long carID, long customerID, double loanAmount, double loanInterest,
 			double totalAmount, int loanMonths, double monthlyPayment, double loanPaid, int paymmentsLeft,

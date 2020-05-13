@@ -25,6 +25,24 @@ public class Car {
 		this.carTypeDesc = carTypeDesc;
 	}
 	
+	public Car(String carMake, String carModel, int carYear, String carColor) {
+		super();
+		this.carMake = carMake;
+		this.carModel = carModel;
+		this.carYear = carYear;
+		this.carColor = carColor;
+	}
+
+	public Car(long carID, String carMake, String carModel, int carYear, String carColor, String carTypeDesc) {
+		super();
+		this.carID = carID;
+		this.carMake = carMake;
+		this.carModel = carModel;
+		this.carYear = carYear;
+		this.carColor = carColor;
+		this.carTypeDesc = carTypeDesc;
+	}
+
 	public Car(long carID, String carMake, String carModel, int carYear, String carColor, int carMilage,
 			double carPrice, String carTypeDesc) {
 		super();

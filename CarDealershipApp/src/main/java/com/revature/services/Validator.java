@@ -106,7 +106,7 @@ public class Validator {
 	}
 	
 	public boolean validatePhone(CharSequence l) {
-		Pattern pattern = Pattern.compile("\\(d{3}) \\d{3}-\\d{4}");
+		Pattern pattern = Pattern.compile("\\d{3}- \\d{3}-\\d{4}");
 		Pattern anotherPattern = Pattern.compile("\\d{10}"); 
 		Matcher matcher = pattern.matcher(l);
 		Matcher anotherMatcher = anotherPattern.matcher(l);

@@ -10,5 +10,7 @@ public interface CustomerDAO {
 	
 	public long getCustomerID(long userID) throws SQLException;
 	
+	public int getCreditScore(long customerID) throws SQLException;
+	
 
 }

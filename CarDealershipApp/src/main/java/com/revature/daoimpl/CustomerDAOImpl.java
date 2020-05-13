@@ -21,7 +21,7 @@ public class CustomerDAOImpl implements CustomerDAO{
 		Statement stmt = conn.createStatement();
 		String sql=null;
 		
-		sql = "SELECT * FROM CUSTOMER WHERE USER_ID = "+userID;
+		sql = "SELECT CUSTOMER_ID FROM CUSTOMER WHERE USER_ID = "+userID;
 		
 		ResultSet rs = stmt.executeQuery(sql);
 		Customer c = null;
@@ -53,6 +53,23 @@ public class CustomerDAOImpl implements CustomerDAO{
 		
 		call.execute();
 		
+	}
+
+	public int getCreditScore(long customerID) throws SQLException {
+		Connection conn=cf.getConnection();
+		
+		Statement stmt = conn.createStatement();
+		String sql=null;
+		
+		sql = "SELECT CREDIT_SCORE FROM CUSTOMER WHERE CUSTOMER_ID = "+customerID;
+		
+		ResultSet rs = stmt.executeQuery(sql);
+		Customer c = null;
+		while(rs.next()) {
+			c=new Customer(rs.getInt(1));
+		}
+		
+		return c.getCreditScore();
 	}
 
 }

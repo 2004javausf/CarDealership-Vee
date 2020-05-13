@@ -79,8 +79,8 @@ public class Menu {
 		int choice = 0;
 		do {
 			System.out.println("\n==================\n      Menu   \n=================="+ "\n[1] VIEW CARS" + "\n[2] VIEW CAR(S) YOU OWNED" 
-					+ "\n[3] DO PAYMENT" + "\n[4] VIEW PAYMENTS" + "\n[5] VIEW REMAINING PAYMENTS"+ "\n[6] SIGN OUT"
-					+ "\nENTER THE NUMBER [1-6]: ");
+					+ "\n[3] DO PAYMENT" + "\n[4] VIEW REMAINING PAYMENTS"+ "\n[5] SIGN OUT"
+					+ "\nENTER THE NUMBER [1-5]: ");
 			choice = in.nextInt();
 			
 			switch (choice) {
@@ -93,15 +93,12 @@ public class Menu {
 				CustomerServices.viewOwnedCars();
 				break;
 			case 3:
-				//call
+				CustomerServices.doPayment();
 				break;
 			case 4:
-				//call
+				CustomerServices.viewRemainingPayments();
 				break;
-			case 5:
-				//call
-				break;
-			
+				
 			default:
 				System.out.println("Signed Out Successfully!!!");
 				startMenu();
@@ -109,7 +106,7 @@ public class Menu {
 			
 			}
 
-		} while (choice < 6);		
+		} while (choice < 5);		
 	}
 	
 	
@@ -121,8 +118,8 @@ public class Menu {
 		int choice = 0;
 		do {
 			System.out.println("\n==================\n      Menu   \n=================="+ "\n[1] ADD NEW CAR" + "\n[2] REMOVE CAR FROM LOT" + "\n[3] VIEW PENDING OFFERS" 
-								+ "\n[4] VIEW ALL REMAINING PAYMENTS "+ "\n[5]VIEW ALL MONTHLY PAYMENTS" + "\n[6] SIGN OUT"
-								+"\nEnter the number [1-6]: ");
+								+ "\n[4]VIEW ALL MONTHLY PAYMENTS" + "\n[5] SIGN OUT"
+								+"\nEnter the number [1-5]: ");
 			choice = in.nextInt();
 
 			switch (choice) {
@@ -132,28 +129,22 @@ public class Menu {
 				break;
 
 			case 2:
-				//call remove car
+				EmployeeServices.removeCar();
 				break;
 			case 3:
 				EmployeeServices.viewPendingOffers();
 				break;
 			case 4:
-				
-				break;
-			case 5:
-				
-				break;
-			case 6:
-								
-				
+				EmployeeServices.viewAllPayments();
 				break;
 			
 			default:
-				
+				System.out.println("Signed Out Successfully!!!");
+				startMenu();
 				break;
 			}
 
-		}while (choice < 6);
+		}while (choice < 5);
 	
 	
 	}

@@ -25,7 +25,10 @@ public class Customer {
 		this.customerID = customerID;
 	}
 
-	
+	public Customer(int creditScore) {
+		super();
+		this.creditScore = creditScore;
+	}
 
 	public Customer(long customerID, String firstName, String lastName, String phoneNo, String emailID, long userID,
 			String userName, String password, int creditScore, int userTypeID, String userType) {

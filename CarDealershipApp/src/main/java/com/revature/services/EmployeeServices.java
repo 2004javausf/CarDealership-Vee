@@ -8,6 +8,7 @@ import java.util.Scanner;
 import com.revature.beans.Offers;
 import com.revature.beans.User;
 import com.revature.daoimpl.CarDAOImpl;
+import com.revature.daoimpl.CustomerDAOImpl;
 import com.revature.daoimpl.UserDAOImpl;
 
 public class EmployeeServices {
@@ -140,34 +141,70 @@ public class EmployeeServices {
 	}
 	
 	public static void viewPendingOffers() {
-		CarDAOImpl cdi = new CarDAOImpl();
+		CarDAOImpl carDI = new CarDAOImpl();
+		CustomerDAOImpl cdi = new CustomerDAOImpl(); 
 		int oid;
+		int creditScore;
+		double interestRate;
+		double monthlyPayments;
 		Menu menu = new Menu();
 		List<Offers> offersList = new ArrayList<Offers>();
 		Offers o = new Offers();
+		
 		try {
-			offersList=cdi.getPendingOffers();
+			offersList=carDI.getPendingOffers();
 			int i=0;
 			long cid;
+			boolean b=false;
 			do {
 				o = offersList.get(i);
 				cid=o.getCarID();
-				cdi.getCarInfo(o.getCarID());
+				carDI.getCarInfo(o.getCarID());
 				System.out.println("\nNo.\tPrice\tCustonmer ID");
 				int j=1;
 				do {
 					System.out.println("["+j+"]\t"+offersList.get(i).getOfferAmount()+"\t"+offersList.get(i).getCustomerID());
 					i++;
 					j++;
-				}while(offersList.get(i).getCarID()==cid);
+					if(i<offersList.size()) {
+						b=(offersList.get(i).getCarID()==cid);
+					}
+				}while( b == true);
 				
-				System.out.println("Which Offer you want to accept for the above car?");
-				System.out.print("Enter the number [1-"+j+"]: ");
-				oid=in.nextInt();
-				o = offersList.get(oid);
-				cdi.acceptOffer(o.getOfferID(), o.getCarID(), o.getCustomerID());
+				System.out.println("Do you want to accept any offer from above list? \n [1] YES\n[2] NO \n Enter the number [1-2]: ");
+				int choice=in.nextInt();
 				
+				switch(choice) {
+				
+				case 1:
+					System.out.println("Which Offer you want to accept for the above car?");
+					System.out.print("Enter the number [1-"+(j-1)+"]: ");
+					oid=in.nextInt();
+					o = offersList.get(oid-1);
+									
+					creditScore=cdi.getCreditScore(o.getCustomerID());
+					
+					if(creditScore<=300) 
+						interestRate = 14.70;
+					else if(creditScore>300 && creditScore<=500)
+						interestRate = 12.20;
+					else if(creditScore>500 && creditScore<=650)
+						interestRate = 8.12;
+					else if(creditScore>650 && creditScore<=800)
+						interestRate = 5.17;
+					else
+						interestRate = 4.23;
+					
+					monthlyPayments=monthlyPayment(o.getLoanAmount(),interestRate,o.getLoanMonths());
+					carDI.acceptOffer(o.getOfferID(), o.getCarID(), o.getCustomerID(),o.getOfferAmount(),o.getDownPayment(),o.getLoanAmount(),o.getLoanMonths(),interestRate,monthlyPayments);
+					break;
+					
+				case 2:
+					break;
+				}
 			}while(i<offersList.size());
+			
+			
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -177,5 +214,47 @@ public class EmployeeServices {
 		
 		
 	}
-
+	
+	public static double monthlyPayment(double loanAmount,double interestRate,int months) {
+		int y = months/12;
+		double mPayment;
+		mPayment = (loanAmount+((loanAmount*interestRate*y)/100))/(months);
+		mPayment=Math.round((mPayment*100.0)/100.0);
+		return mPayment;
+	}
+	
+	public static void removeCar() {
+		
+		CarDAOImpl carDI = new CarDAOImpl();
+		long carID;
+		
+		System.out.print("Enter CAR ID for the car you want to remove: ");
+		carID=in.nextLong();
+		
+		try {
+			carDI.removeCar(carID);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public static void viewAllPayments() {
+		
+		CarDAOImpl carDI = new CarDAOImpl();
+		long carID;
+		
+		System.out.print("Enter CAR ID for the car you want to view Payments: ");
+		carID=in.nextLong();
+		
+		try {
+			carDI.viewPayments(carID);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
 }

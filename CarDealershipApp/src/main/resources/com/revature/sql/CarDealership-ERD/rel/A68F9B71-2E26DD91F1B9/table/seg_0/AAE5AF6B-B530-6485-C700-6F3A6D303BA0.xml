@@ -1,0 +1,125 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AAE5AF6B-B530-6485-C700-6F3A6D303BA0" schemaObject="9D10007A-ABC2-DCEB-53A0-C4FCB97C6054" name="EMPLOYEE">
+<sourceConnName>CarDealership</sourceConnName>
+<sourceObjSchema>VP</sourceObjSchema>
+<sourceObjName>EMPLOYEE</sourceObjName>
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:38 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="EMPLOYEE_ID" id="CB89B85E-C19E-046C-0E4D-361E8EE9BB1E">
+<sourceConnName>CarDealership</sourceConnName>
+<sourceObjSchema>EMPLOYEE</sourceObjSchema>
+<sourceObjName>EMPLOYEE_ID</sourceObjName>
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementDisableCache>false</autoIncrementDisableCache>
+<autoIncrementCache>20</autoIncrementCache>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="FIRST_NAME" id="39DC8FB2-D11A-8CF0-B6E7-4C7CFF492739">
+<sourceConnName>CarDealership</sourceConnName>
+<sourceObjSchema>EMPLOYEE</sourceObjSchema>
+<sourceObjName>FIRST_NAME</sourceObjName>
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LAST_NAME" id="93A69CC1-19AF-5313-3B89-EC350DBCBCD0">
+<sourceConnName>CarDealership</sourceConnName>
+<sourceObjSchema>EMPLOYEE</sourceObjSchema>
+<sourceObjName>LAST_NAME</sourceObjName>
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESIGNATION" id="E7EBD94C-1773-475D-7E39-A670E503DD3B">
+<sourceConnName>CarDealership</sourceConnName>
+<sourceObjSchema>EMPLOYEE</sourceObjSchema>
+<sourceObjName>DESIGNATION</sourceObjName>
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USER_ID" id="3EE10BA8-3E5E-657D-BD38-08AC8E358C12">
+<sourceConnName>CarDealership</sourceConnName>
+<sourceObjSchema>EMPLOYEE</sourceObjSchema>
+<sourceObjName>USER_ID</sourceObjName>
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="77BA2D53-F537-2B9B-9448-010AC2608CE0" referredColumn="3A6C610F-41F1-E692-E998-08483A08AB40"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="19FEDCBB-D977-E3F5-E482-387524B3557F" schemaObject="9D10007A-ABC2-DCEB-53A0-C4FCB97C6054" name="EMPLOYEE_PK">
+<sourceConnName>CarDealership</sourceConnName>
+<sourceObjSchema>VP</sourceObjSchema>
+<sourceObjName>SYS_C005258</sourceObjName>
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:40 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CB89B85E-C19E-046C-0E4D-361E8EE9BB1E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DA92243C-C388-DE05-75AF-BE313BBBA962" name="FK_EMPLOYEE_USER_INFO">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:42 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3EE10BA8-3E5E-657D-BD38-08AC8E358C12"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

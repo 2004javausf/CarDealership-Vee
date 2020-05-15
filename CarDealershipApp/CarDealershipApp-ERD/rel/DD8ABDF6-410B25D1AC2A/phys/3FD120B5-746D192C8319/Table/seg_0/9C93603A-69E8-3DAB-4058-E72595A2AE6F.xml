@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="OFFERS" directorySegmentName="seg_0" id="9C93603A-69E8-3DAB-4058-E72595A2AE6F">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-15 04:59:35 UTC</createdTime>
+<ownerDesignName>DriveEASY-CarDealershipApp-ERD</ownerDesignName>
+<schemaObject>4D4375B6-0A82-C156-E227-45EC9616B7BC</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>EA6F7053-6933-F210-0C04-E44CE0708092</segment>
+<tableSpace>37A97637-FCDF-9AFB-2B03-19AD520C4CB0</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="CAR_LOAN_ID" id="0207BE4B-8814-3538-D274-BDD2CF4C9842">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-15 04:59:36 UTC</createdTime>
+<ownerDesignName>DriveEASY-CarDealershipApp-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="OFFER_STATUS" id="0AE564D0-6FFC-0CC7-4C41-918F95CC66A9">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-15 04:59:36 UTC</createdTime>
+<ownerDesignName>DriveEASY-CarDealershipApp-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DOWN_PAYMENT" id="16BF363E-76C5-6385-8156-1F156D4F9E3D">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-15 04:59:36 UTC</createdTime>
+<ownerDesignName>DriveEASY-CarDealershipApp-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CUSTOMER_ID" id="29C8EA62-8D48-4CAA-CDB8-3A5CE1B73364">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-15 04:59:36 UTC</createdTime>
+<ownerDesignName>DriveEASY-CarDealershipApp-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LOAN_AMOUNT" id="34E54A78-9C9B-7FBA-FC2C-0300E4717172">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-15 04:59:36 UTC</createdTime>
+<ownerDesignName>DriveEASY-CarDealershipApp-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CAR_ID" id="7A3C8637-51A3-0CC7-8F84-61B91CB6231A">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-15 04:59:36 UTC</createdTime>
+<ownerDesignName>DriveEASY-CarDealershipApp-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="OFFER_AMOUNT" id="CA02200A-3A97-11BF-B02C-123DD4B8C243">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-15 04:59:36 UTC</createdTime>
+<ownerDesignName>DriveEASY-CarDealershipApp-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="OFFER_ID" id="D1B34429-3E63-E4AA-CE3B-EE2A48E2F10B">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-15 04:59:36 UTC</createdTime>
+<ownerDesignName>DriveEASY-CarDealershipApp-ERD</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="LOAN_MONTHS" id="FFB4ACEB-847F-E6D9-DCA9-8297D8C2128C">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-15 04:59:36 UTC</createdTime>
+<ownerDesignName>DriveEASY-CarDealershipApp-ERD</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_OFFERS_CAR" id="3C450AEC-7CA6-8D5D-9F81-B3F935B4324E">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-15 04:59:40 UTC</createdTime>
+<ownerDesignName>DriveEASY-CarDealershipApp-ERD</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_OFFERS_CAR_LOAN" id="7C04E0E7-1627-1A20-CB9E-3C4DFE12F74A">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-15 04:59:40 UTC</createdTime>
+<ownerDesignName>DriveEASY-CarDealershipApp-ERD</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_OFFERS_CUSTOMER" id="9294349C-70F5-23C9-5608-CC21C6009CB8">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-15 04:59:40 UTC</createdTime>
+<ownerDesignName>DriveEASY-CarDealershipApp-ERD</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="OFFERS_PK" id="8AC12B68-A0DE-5978-3BCC-9560851D1631">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-15 04:59:39 UTC</createdTime>
+<ownerDesignName>DriveEASY-CarDealershipApp-ERD</ownerDesignName>
+<schemaObject>4D4375B6-0A82-C156-E227-45EC9616B7BC</schemaObject>
+<segment>49D5F153-06ED-9161-A4F4-973B3F0242B6</segment>
+<tableSpace>37A97637-FCDF-9AFB-2B03-19AD520C4CB0</tableSpace>
+<indexSegment>49D5F153-06ED-9161-A4F4-973B3F0242B6</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="DD8ABDF6-090A-A132-C569-410B25D1AC2A" mainViewID="94DA6522-EB2E-5CD8-37E2-70FB84D2AEA2">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-15 04:59:01 UTC</createdTime>
+<ownerDesignName>DriveEASY-CarDealershipApp-ERD</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>3FD120B5-9F4E-6278-D5E2-746D192C8319</selectedRDBMSSite>
+<importConnectionStamps>
+<importConnectionStamp class="oracle.dbtools.crest.imports.DBConnectionStamp">
+<connName>CarDealership</connName>
+<connUser>vp</connUser>
+<connType>1</connType>
+</importConnectionStamp>
+</importConnectionStamps>
+</relationalModel>

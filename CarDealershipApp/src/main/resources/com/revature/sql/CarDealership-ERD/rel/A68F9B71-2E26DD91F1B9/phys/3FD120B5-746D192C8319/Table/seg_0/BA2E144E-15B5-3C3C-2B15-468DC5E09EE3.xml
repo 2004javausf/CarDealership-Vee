@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="CAR" directorySegmentName="seg_0" id="BA2E144E-15B5-3C3C-2B15-468DC5E09EE3">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:38 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<schemaObject>9D10007A-ABC2-DCEB-53A0-C4FCB97C6054</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>0600A674-3906-8AED-4FC9-051AE5D2086E</segment>
+<tableSpace>15A5BC4A-A42F-D9F0-F24A-A7C4A0CCBCC2</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="CAR_PRICE" id="07B71464-7BB5-811C-C891-D6B2281DEA3B">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CAR_ID" id="0901EDCA-A5A2-9357-2CBE-B1B74ABDF6EB">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="CUSTOMER_ID" id="0EFE431B-553F-C8EF-8584-5F4F5904D816">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CAR_TYPE_ID" id="6D528720-899E-EB8E-F328-6F153B68FBE0">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CAR_COLOR" id="7BE357E1-264D-17E1-9DFD-3604604B7CBB">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CAR_MILAGE" id="AA65DC84-59CC-1BA6-E287-8929BBE84DE5">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CAR_STATUS" id="BA74100D-FF63-4FD8-3FBD-B4FD8BCDB298">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CAR_MAKE" id="CE0B197F-D38A-984C-D30A-6C89021F04E3">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CAR_YEAR" id="D20F98AD-51CB-19C6-9022-EE73693106F6">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CAR_MODEL" id="F2B145C5-12CF-29F6-847E-E8ABE06C9743">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_CAR_CUSTOMER" id="115AC28A-C465-C0E6-6F39-9B8CFC9BBC7A">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:42 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_CAR_CAR_TYPE" id="16F6A728-C43F-34EC-9F07-4088475627F1">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:42 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="CAR_PK" id="07C7FA2E-B1F4-F834-5D02-F244358622FA">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:41 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<schemaObject>9D10007A-ABC2-DCEB-53A0-C4FCB97C6054</schemaObject>
+<segment>3B94EBA9-A816-AD7E-0D57-47BF7EABF0ED</segment>
+<tableSpace>15A5BC4A-A42F-D9F0-F24A-A7C4A0CCBCC2</tableSpace>
+<indexSegment>3B94EBA9-A816-AD7E-0D57-47BF7EABF0ED</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

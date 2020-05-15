@@ -1,0 +1,215 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="013192A4-67F1-6C4F-69AD-B54A849B1072" schemaObject="9D10007A-ABC2-DCEB-53A0-C4FCB97C6054" name="OFFERS">
+<sourceConnName>CarDealership</sourceConnName>
+<sourceObjSchema>VP</sourceObjSchema>
+<sourceObjName>OFFERS</sourceObjName>
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:38 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="OFFER_ID" id="251B8A72-4536-B55E-0A83-489AC451D3E7">
+<sourceConnName>CarDealership</sourceConnName>
+<sourceObjSchema>OFFERS</sourceObjSchema>
+<sourceObjName>OFFER_ID</sourceObjName>
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementDisableCache>false</autoIncrementDisableCache>
+<autoIncrementCache>20</autoIncrementCache>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="CAR_ID" id="379B250B-954B-8E83-016C-09605687C003">
+<sourceConnName>CarDealership</sourceConnName>
+<sourceObjSchema>OFFERS</sourceObjSchema>
+<sourceObjName>CAR_ID</sourceObjName>
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5E373B19-C640-26AC-6908-B80EE6940AB5" referredColumn="0901EDCA-A5A2-9357-2CBE-B1B74ABDF6EB"/>
+</associations>
+</Column>
+<Column name="CUSTOMER_ID" id="B9430DCF-B4E8-4558-A143-E795126B8858">
+<sourceConnName>CarDealership</sourceConnName>
+<sourceObjSchema>OFFERS</sourceObjSchema>
+<sourceObjName>CUSTOMER_ID</sourceObjName>
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A1A2D3E2-8763-2A31-254C-D8784361C989" referredColumn="62845A34-7273-D867-3A1C-9B7467A53837"/>
+</associations>
+</Column>
+<Column name="OFFER_AMOUNT" id="3B6D8F57-B55C-D2A7-8C87-997BCA34BB96">
+<sourceConnName>CarDealership</sourceConnName>
+<sourceObjSchema>OFFERS</sourceObjSchema>
+<sourceObjName>OFFER_AMOUNT</sourceObjName>
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OFFER_STATUS" id="2F19F557-B7B7-7860-B072-37A98D3AA541">
+<sourceConnName>CarDealership</sourceConnName>
+<sourceObjSchema>OFFERS</sourceObjSchema>
+<sourceObjName>OFFER_STATUS</sourceObjName>
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DOWN_PAYMENT" id="2E72007A-732F-01B3-7231-82BA82B12A06">
+<sourceConnName>CarDealership</sourceConnName>
+<sourceObjSchema>OFFERS</sourceObjSchema>
+<sourceObjName>DOWN_PAYMENT</sourceObjName>
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LOAN_AMOUNT" id="3F8B4114-87C9-0E40-2600-9FC2CE4EF28B">
+<sourceConnName>CarDealership</sourceConnName>
+<sourceObjSchema>OFFERS</sourceObjSchema>
+<sourceObjName>LOAN_AMOUNT</sourceObjName>
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CAR_LOAN_ID" id="9B3744D1-ED49-335F-0E6E-61B28663AA0C">
+<sourceConnName>CarDealership</sourceConnName>
+<sourceObjSchema>OFFERS</sourceObjSchema>
+<sourceObjName>CAR_LOAN_ID</sourceObjName>
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C66DC138-E202-E560-D02C-C9FFEEBEB538" referredColumn="0DD2785C-1E57-FC8C-81ED-D7B9E560131C"/>
+</associations>
+</Column>
+<Column name="LOAN_MONTHS" id="651FF581-EA75-A9D5-FC63-4367CA6DE853">
+<sourceConnName>CarDealership</sourceConnName>
+<sourceObjSchema>OFFERS</sourceObjSchema>
+<sourceObjName>LOAN_MONTHS</sourceObjName>
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1D5B50FD-ABE0-18DA-666E-BD69B3724B66" schemaObject="9D10007A-ABC2-DCEB-53A0-C4FCB97C6054" name="OFFERS_PK">
+<sourceConnName>CarDealership</sourceConnName>
+<sourceObjSchema>VP</sourceObjSchema>
+<sourceObjName>SYS_C005264</sourceObjName>
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:40 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="251B8A72-4536-B55E-0A83-489AC451D3E7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="09B877FF-87D3-A75E-0320-2A16579C58EE" name="FK_OFFERS_CAR">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:42 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="379B250B-954B-8E83-016C-09605687C003"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="ABA98671-D6D4-7CD5-314F-0895F5EDC4E3" name="FK_OFFERS_CAR_LOAN">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:42 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9B3744D1-ED49-335F-0E6E-61B28663AA0C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D0105838-6D41-BCBC-A25E-36436FA590C0" name="FK_OFFERS_CUSTOMER">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:42 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B9430DCF-B4E8-4558-A143-E795126B8858"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

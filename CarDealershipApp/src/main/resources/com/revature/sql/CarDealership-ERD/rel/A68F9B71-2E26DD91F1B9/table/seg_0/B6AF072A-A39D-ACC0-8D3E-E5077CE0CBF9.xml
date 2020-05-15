@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B6AF072A-A39D-ACC0-8D3E-E5077CE0CBF9" schemaObject="9D10007A-ABC2-DCEB-53A0-C4FCB97C6054" name="CAR_LOT">
+<sourceConnName>CarDealership</sourceConnName>
+<sourceObjSchema>VP</sourceObjSchema>
+<sourceObjName>CAR_LOT</sourceObjName>
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:38 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CAR_ID" id="1A204E0B-61DA-E751-4657-B5F5860F9245">
+<sourceConnName>CarDealership</sourceConnName>
+<sourceObjSchema>CAR_LOT</sourceObjSchema>
+<sourceObjName>CAR_ID</sourceObjName>
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C36706EA-B836-F86B-5FD4-3B9E273ECCE5" referredColumn="0901EDCA-A5A2-9357-2CBE-B1B74ABDF6EB"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D069004A-EA0E-74AF-6594-626ADB7AAA47" schemaObject="9D10007A-ABC2-DCEB-53A0-C4FCB97C6054" name="CAR_LOT_CAR_ID_UN">
+<sourceConnName>CarDealership</sourceConnName>
+<sourceObjSchema>VP</sourceObjSchema>
+<sourceObjName>SYS_C005324</sourceObjName>
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:40 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1A204E0B-61DA-E751-4657-B5F5860F9245"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2EF6EA86-C947-06C1-BB65-E7B94AB2639D" name="FK_CAR_LOT_CAR">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:42 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1A204E0B-61DA-E751-4657-B5F5860F9245"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

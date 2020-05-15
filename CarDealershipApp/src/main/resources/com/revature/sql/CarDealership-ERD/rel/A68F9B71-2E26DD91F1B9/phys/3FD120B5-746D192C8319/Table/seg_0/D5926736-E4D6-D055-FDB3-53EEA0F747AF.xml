@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="CAR_LOAN" directorySegmentName="seg_0" id="D5926736-E4D6-D055-FDB3-53EEA0F747AF">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:38 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<schemaObject>9D10007A-ABC2-DCEB-53A0-C4FCB97C6054</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>0600A674-3906-8AED-4FC9-051AE5D2086E</segment>
+<tableSpace>15A5BC4A-A42F-D9F0-F24A-A7C4A0CCBCC2</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="LOAN_TOTAL_AMOUNT" id="015ACF3E-6058-AEF6-6ECE-A26C6FC9D669">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CAR_LOAN_ID" id="0DD2785C-1E57-FC8C-81ED-D7B9E560131C">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="LOAN_MONTHLY_PAYMENT" id="2D0AB57B-20E6-0CDC-76A8-2DEBF7859E6B">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CAR_ID" id="3048DA9F-8E95-5A37-7843-BF5A94206F40">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LOAN_BALANCE" id="551EE35C-6F1B-8514-AAA6-99EF9875C216">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LOAN_PAYMENT_LEFT" id="7A884EDD-DF87-52AA-B14B-794092215169">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LOAN_AMOUNT" id="ADF086CA-EEE9-F693-C343-CB813629435B">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LOAN_MONTHS" id="C2C0274D-9893-119C-CFC8-9C18ACFD655D">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LOAN_INTEREST" id="C53FA862-0BE0-8871-0DF5-02429CD49858">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CUSTOMER_ID" id="E89BFC1A-A92F-B3C1-DAE6-8894F63B7E88">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LOAN_PAID" id="F8AFDA89-18C2-F616-0A21-5F375AAE30DA">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_CAR_LOAN_CAR" id="D5EBB281-5177-EFA4-63F1-60EBA02756DD">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:42 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_CAR_LOAN_CUSTOMER" id="F4F6C39E-E235-CB77-11B0-70E16F473894">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:42 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="CAR_LOAN_PK" id="2C304D73-74DE-A664-AB64-7D51DCCC4B7B">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:41 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<schemaObject>9D10007A-ABC2-DCEB-53A0-C4FCB97C6054</schemaObject>
+<segment>3B94EBA9-A816-AD7E-0D57-47BF7EABF0ED</segment>
+<tableSpace>15A5BC4A-A42F-D9F0-F24A-A7C4A0CCBCC2</tableSpace>
+<indexSegment>3B94EBA9-A816-AD7E-0D57-47BF7EABF0ED</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

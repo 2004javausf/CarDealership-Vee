@@ -1,0 +1,41 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="USER_TYPE" directorySegmentName="seg_0" id="E19DEB6E-969A-47F2-92FB-62547084B9E2">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-15 04:59:35 UTC</createdTime>
+<ownerDesignName>DriveEASY-CarDealershipApp-ERD</ownerDesignName>
+<schemaObject>4D4375B6-0A82-C156-E227-45EC9616B7BC</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>EA6F7053-6933-F210-0C04-E44CE0708092</segment>
+<tableSpace>37A97637-FCDF-9AFB-2B03-19AD520C4CB0</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="USER_TYPE_DESC" id="0F83839C-1DFC-E294-B4FC-AF09706FFF54">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-15 04:59:36 UTC</createdTime>
+<ownerDesignName>DriveEASY-CarDealershipApp-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="USER_TYPE_ID" id="2D7884EA-F84A-DA96-F12E-4440B839A026">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-15 04:59:36 UTC</createdTime>
+<ownerDesignName>DriveEASY-CarDealershipApp-ERD</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="USER_TYPE_PK" id="E2A404CB-6B97-FFF4-769B-0D3F7C74FD1B">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-15 04:59:39 UTC</createdTime>
+<ownerDesignName>DriveEASY-CarDealershipApp-ERD</ownerDesignName>
+<schemaObject>4D4375B6-0A82-C156-E227-45EC9616B7BC</schemaObject>
+<segment>49D5F153-06ED-9161-A4F4-973B3F0242B6</segment>
+<tableSpace>37A97637-FCDF-9AFB-2B03-19AD520C4CB0</tableSpace>
+<indexSegment>49D5F153-06ED-9161-A4F4-973B3F0242B6</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

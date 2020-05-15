@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="99242C4F-5066-752E-3AAF-0E0BAD744606" schemaObject="4D4375B6-0A82-C156-E227-45EC9616B7BC" name="CAR_LOT">
+<sourceConnName>CarDealership</sourceConnName>
+<sourceObjSchema>VP</sourceObjSchema>
+<sourceObjName>CAR_LOT</sourceObjName>
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-15 04:59:35 UTC</createdTime>
+<ownerDesignName>DriveEASY-CarDealershipApp-ERD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CAR_ID" id="D7A81E6D-BA42-971D-766F-BFC0E19CAFB9">
+<sourceConnName>CarDealership</sourceConnName>
+<sourceObjSchema>CAR_LOT</sourceObjSchema>
+<sourceObjName>CAR_ID</sourceObjName>
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-15 04:59:36 UTC</createdTime>
+<ownerDesignName>DriveEASY-CarDealershipApp-ERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D5CE45BD-5E67-C8DA-94C5-DF86BA3890D4" referredColumn="38ADF00C-D583-7D37-3835-A6BD6D16A0F8"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DD9FE578-016D-7722-FDEE-0E1478C3C0D9" schemaObject="4D4375B6-0A82-C156-E227-45EC9616B7BC" name="CAR_LOT_CAR_ID_UN">
+<sourceConnName>CarDealership</sourceConnName>
+<sourceObjSchema>VP</sourceObjSchema>
+<sourceObjName>SYS_C005324</sourceObjName>
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-15 04:59:37 UTC</createdTime>
+<ownerDesignName>DriveEASY-CarDealershipApp-ERD</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D7A81E6D-BA42-971D-766F-BFC0E19CAFB9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BB1BB247-5539-187C-2FA4-093A95743DF1" name="FK_CAR_LOT_CAR">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-15 04:59:40 UTC</createdTime>
+<ownerDesignName>DriveEASY-CarDealershipApp-ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D7A81E6D-BA42-971D-766F-BFC0E19CAFB9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

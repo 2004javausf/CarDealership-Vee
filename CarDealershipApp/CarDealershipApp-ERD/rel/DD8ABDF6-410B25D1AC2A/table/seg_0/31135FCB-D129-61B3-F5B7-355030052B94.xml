@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="31135FCB-D129-61B3-F5B7-355030052B94" schemaObject="4D4375B6-0A82-C156-E227-45EC9616B7BC" name="PAYMENTS">
+<sourceConnName>CarDealership</sourceConnName>
+<sourceObjSchema>VP</sourceObjSchema>
+<sourceObjName>PAYMENTS</sourceObjName>
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-15 04:59:35 UTC</createdTime>
+<ownerDesignName>DriveEASY-CarDealershipApp-ERD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PAYMENT_ID" id="E6007577-0E37-350E-EFBF-09FD85235991">
+<sourceConnName>CarDealership</sourceConnName>
+<sourceObjSchema>PAYMENTS</sourceObjSchema>
+<sourceObjName>PAYMENT_ID</sourceObjName>
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-15 04:59:36 UTC</createdTime>
+<ownerDesignName>DriveEASY-CarDealershipApp-ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<defaultOntNull>true</defaultOntNull>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementDisableCache>false</autoIncrementDisableCache>
+<autoIncrementCache>20</autoIncrementCache>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="CAR_LOAN_ID" id="76BA0245-6A4F-BAE2-A191-31EFBCD2975E">
+<sourceConnName>CarDealership</sourceConnName>
+<sourceObjSchema>PAYMENTS</sourceObjSchema>
+<sourceObjName>CAR_LOAN_ID</sourceObjName>
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-15 04:59:36 UTC</createdTime>
+<ownerDesignName>DriveEASY-CarDealershipApp-ERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0C20D3FB-EF3A-157C-3E52-A7D0CAF10C5C" referredColumn="EE8EAA22-8520-14C1-6E93-D36E04CB37AF"/>
+</associations>
+</Column>
+<Column name="PAYMENT_AMOUNT" id="F4E0204F-69B8-E48E-8267-B450BDDB56B1">
+<sourceConnName>CarDealership</sourceConnName>
+<sourceObjSchema>PAYMENTS</sourceObjSchema>
+<sourceObjName>PAYMENT_AMOUNT</sourceObjName>
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-15 04:59:36 UTC</createdTime>
+<ownerDesignName>DriveEASY-CarDealershipApp-ERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PAYMENT_DATE" id="FCFE45D0-03DC-A0AB-180E-4386FCE59E60">
+<sourceConnName>CarDealership</sourceConnName>
+<sourceObjSchema>PAYMENTS</sourceObjSchema>
+<sourceObjName>PAYMENT_DATE</sourceObjName>
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-15 04:59:36 UTC</createdTime>
+<ownerDesignName>DriveEASY-CarDealershipApp-ERD</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4FAC5E6B-A6F7-E80B-4A2F-A83C48155BE4" schemaObject="4D4375B6-0A82-C156-E227-45EC9616B7BC" name="PAYMENTS_PK">
+<sourceConnName>CarDealership</sourceConnName>
+<sourceObjSchema>VP</sourceObjSchema>
+<sourceObjName>SYS_C005270</sourceObjName>
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-15 04:59:37 UTC</createdTime>
+<ownerDesignName>DriveEASY-CarDealershipApp-ERD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E6007577-0E37-350E-EFBF-09FD85235991"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EDBF5217-F49A-630A-0BCA-1E12F05BEFC2" name="FK_PAYMENTS_CAR_LOAN">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-15 04:59:40 UTC</createdTime>
+<ownerDesignName>DriveEASY-CarDealershipApp-ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="76BA0245-6A4F-BAE2-A191-31EFBCD2975E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

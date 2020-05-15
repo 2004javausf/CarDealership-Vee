@@ -19,6 +19,15 @@ public class Car {
 		// TODO Auto-generated constructor stub
 	}
 	
+	
+	
+	public Car(long carID) {
+		super();
+		this.carID = carID;
+	}
+
+
+
 	public Car(int carTypeID, String carTypeDesc) {
 		super();
 		this.carTypeID = carTypeID;

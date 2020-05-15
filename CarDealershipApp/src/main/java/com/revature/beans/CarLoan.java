@@ -7,7 +7,7 @@ public class CarLoan {
 	private long customerID;
 	private float loanAmount;
 	private float loanInterest;
-	private float TotalAmount;
+	private float totalAmount;
 	private int loanMonths;
 	private float monthlyPayment;
 	private float loanPaid;
@@ -27,9 +27,9 @@ public class CarLoan {
 	}
 
 
-	public CarLoan(float loanAmount, float loanPaid, int paymmentsLeft, float loanBalance) {
+	public CarLoan(float totalAmount, float loanPaid, int paymmentsLeft, float loanBalance) {
 		super();
-		this.loanAmount = loanAmount;
+		this.totalAmount = totalAmount;
 		this.loanPaid = loanPaid;
 		this.paymmentsLeft = paymmentsLeft;
 		this.loanBalance = loanBalance;
@@ -55,7 +55,7 @@ public class CarLoan {
 		this.customerID = customerID;
 		this.loanAmount = loanAmount;
 		this.loanInterest = loanInterest;
-		TotalAmount = totalAmount;
+		this.totalAmount = totalAmount;
 		this.loanMonths = loanMonths;
 		this.monthlyPayment = monthlyPayment;
 		this.loanPaid = loanPaid;
@@ -104,11 +104,11 @@ public class CarLoan {
 	}
 
 	public float getTotalAmount() {
-		return TotalAmount;
+		return totalAmount;
 	}
 
 	public void setTotalAmount(float totalAmount) {
-		TotalAmount = totalAmount;
+		totalAmount = totalAmount;
 	}
 
 	public int getLoanMonths() {
@@ -151,12 +151,4 @@ public class CarLoan {
 		this.loanBalance = loanBalance;
 	}
 	
-	public static float monthlyPayment(float loanAmount,float interestRate,int months) {
-		int y = months/12;
-		float mPayment;
-		mPayment = (loanAmount+((loanAmount*interestRate*y)/100))/(months);
-		mPayment=Math.round((mPayment*100.0)/100.0);
-		return mPayment;
-	}
-
 }

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="BD3DB226-9A68-D768-0F24-94F9E4D4014A" containerWithKeyObject="3D40E5AB-F21F-0FB4-9FCB-F66DD082E18C" localFKIndex="5B9F8DA3-A26E-C6B4-5CFB-CE5A60162F7E" name="FK_CAR_LOAN_CUSTOMER">
+<sourceConnName>CarDealership</sourceConnName>
+<sourceObjSchema>VP</sourceObjSchema>
+<sourceObjName>FK_CAR_LOAN_CUSTOMER</sourceObjName>
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-15 04:59:40 UTC</createdTime>
+<ownerDesignName>DriveEASY-CarDealershipApp-ERD</ownerDesignName>
+<referredTableLongName>VP.CUSTOMER</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>F716777D-257C-E886-C5B8-F64ABACEEC91</referredTableID>
+<keyObject>EB052A63-739F-5F55-FB7C-A81813A94662</keyObject>
+<referredKeyID>EB052A63-739F-5F55-FB7C-A81813A94662</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>CUSTOMER_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

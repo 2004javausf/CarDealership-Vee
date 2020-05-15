@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<UserOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UserOraclev10g" name="VP" directorySegmentName="seg_0" id="BF87FDDB-97D0-41A1-AD9C-BDAD7AB322E1">
+<sourceConnName>CarDealership</sourceConnName>
+<sourceObjName>VP</sourceObjName>
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-15 04:59:34 UTC</createdTime>
+<ownerDesignName>DriveEASY-CarDealershipApp-ERD</ownerDesignName>
+<schemaObject>4D4375B6-0A82-C156-E227-45EC9616B7BC</schemaObject>
+</UserOraclev10g>

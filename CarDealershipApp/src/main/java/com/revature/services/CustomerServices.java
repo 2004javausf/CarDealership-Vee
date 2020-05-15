@@ -19,6 +19,7 @@ public class CustomerServices {
 	static Scanner in = new Scanner(System.in);
 	static Scanner st = new Scanner(System.in);
 	static long customerID;
+	static String uName;
 	
 	public static void addCustomer() {
 		
@@ -87,7 +88,6 @@ public class CustomerServices {
 		UserDAOImpl udi = new UserDAOImpl();
 		CustomerDAOImpl cdi = new CustomerDAOImpl();
 		
-		String uName;
 		String password;
 		Menu menu = new Menu();
 		List<User> userList = new ArrayList<User>();
@@ -115,7 +115,7 @@ public class CustomerServices {
 			else {
 					
 					customerID = cdi.getCustomerID(userList.get(0).getUserID());
-					LogThis.LogIt("info", uName+"signed in successfully!!!");
+					LogThis.LogIt("info", uName+" signed in successfully!!!");
 					//System.out.println("Login Sucessfull");
 					menu.custTransMenu();
 			}
@@ -136,66 +136,75 @@ public class CustomerServices {
 		try {
 			carList = carDI.getCars();
 			for(int i=0; i<carList.size();i++) {
-				int choice;
+				
 				c = carList.get(i);
-				System.out.println(c);
-				
-				System.out.print("\n[1] PLACE AN OFFER \n[2]SHOW NEXT CAR \n[3] GO BACK TO MENU"
-						+"\n\nENTER THE NUMBER [1-3]: ");
-				choice=in.nextInt();
-				
-				switch(choice) {
-				case 1:		
-					float offerAmount;
-					float downPayment=0;
-					float loanAmount;
-					int loanMonths;
-					int creditScore;
-					float interestRate;
-	
+				int count;
+				count=carDI.isOfferPlacedAlready(c.getCarID(), customerID);
+				if(count==0) {
+					int choice;
 					
-					System.out.print("OFFER PRICE: ");
-					offerAmount=in.nextFloat();
+					System.out.println(c);
 					
-					System.out.print("DOWN PAYMENT: ");
-					downPayment=in.nextFloat();
+					System.out.print("\n[1] PLACE AN OFFER \n[2] SHOW NEXT CAR \n[3] GO BACK TO MENU"
+							+"\n\nENTER THE NUMBER [1-3]: ");
+					choice=in.nextInt();
 					
-					loanAmount=offerAmount-downPayment;
-					creditScore = cdi.getCreditScore(customerID);
-					System.out.println("As per your creditScore, offered price and down payment");
-					
-					if(creditScore<=300) 
-						interestRate = (float) 14.70;
-					else if(creditScore>300 && creditScore<=500)
-						interestRate = (float) 12.20;
-					else if(creditScore>500 && creditScore<=650)
-						interestRate = (float) 8.12;
-					else if(creditScore>650 && creditScore<=800)
-						interestRate = (float) 5.17;
-					else
-						interestRate = (float) 4.23;
-					float y;
-					System.out.println("Your loan amount will be $"+loanAmount);
-					System.out.println("MONTHS \tINTEREST \t MoONTHLY PAYMENTS ");
-					System.out.println("---------------------------------------------------------------------------------------------------------------------");
-					for(int x=1; x<=6;x++) {
-						y=(loanAmount+((loanAmount*interestRate*x)/100))/(x*12);
+					switch(choice) {
+					case 1:		
+						float offerAmount;
+						float downPayment=0;
+						float loanAmount;
+						int loanMonths;
+						int creditScore;
+						float interestRate;
+		
 						
-						System.out.println((x*12)+"\t"+interestRate+"\t"+y);
+						System.out.print("OFFER PRICE: ");
+						offerAmount=in.nextFloat();
+						
+						System.out.print("DOWN PAYMENT: ");
+						downPayment=in.nextFloat();
+						
+						loanAmount=offerAmount-downPayment;
+						creditScore = cdi.getCreditScore(customerID);
+						System.out.println("As per your creditScore, offered price and down payment");
+						
+						if(creditScore<=300) 
+							interestRate = (float) 14.70;
+						else if(creditScore>300 && creditScore<=500)
+							interestRate = (float) 12.20;
+						else if(creditScore>500 && creditScore<=650)
+							interestRate = (float) 8.12;
+						else if(creditScore>650 && creditScore<=800)
+							interestRate = (float) 5.17;
+						else
+							interestRate = (float) 4.23;
+						float y;
+						System.out.println("Your loan amount will be $"+loanAmount);
+						System.out.println("MONTHS \t\tINTEREST \tMONTHLY PAYMENTS ");
+						System.out.println("---------------------------------------------------------------------------------------------------------------------");
+						for(int x=1; x<=6;x++) {
+							y=(loanAmount+((loanAmount*interestRate*x)/100))/(x*12);
+							
+							System.out.println((x*12)+"\t\t"+interestRate+"\t\t"+y);
+						}
+						
+						System.out.print("\n How many months you prefers for you loan payment: ");
+						loanMonths=in.nextInt();
+						
+						carDI.addOffer(c.getCarID(), customerID, offerAmount, downPayment, loanAmount, loanMonths);
+						System.out.println("Your offer placed successfully");
+						break;
+					case 2:
+						break;
+					case 3:
+						m.custTransMenu();
+						break;
 					}
-					
-					System.out.print("\n How many months you prefers for you loan payment: ");
-					loanMonths=in.nextInt();
-					
-					carDI.addOffer(c.getCarID(), customerID, offerAmount, downPayment, loanAmount, loanMonths);
-					break;
-				case 2:
-					break;
-				case 3:
-					m.custTransMenu();
-					break;
 				}
-				
+				else {
+					System.out.println("No more cars to place offers. Check again Later!!!");
+				}
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -210,9 +219,10 @@ public class CustomerServices {
 		
 		try {
 			carList = carDI.getOwnedCars(customerID);
+			System.out.println("\n");
 			for(int i=0; i<carList.size();i++) {
 				c = carList.get(i);
-				System.out.println("["+(i+1)+"]\t"+c.getCarMake()+"\t"+c.getCarModel()+"\t"+c.getCarYear()+"\t"+c.getCarColor()+"\t"+c.getCarTypeDesc());
+				System.out.println("\n["+(i+1)+"]\t"+c.getCarMake()+"\t"+c.getCarModel()+"\t"+c.getCarYear()+"\t"+c.getCarColor()+"\t"+c.getCarTypeDesc());
 			}
 			
 		} catch (SQLException e) {

@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev12c class="oracle.dbtools.crest.model.design.storage.oracle.v12c.TableProxyOraclev12c" name="PAYMENTS" directorySegmentName="seg_0" id="502D263E-AA4D-2389-9FE8-DAC9F9B0B291">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:38 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<schemaObject>9D10007A-ABC2-DCEB-53A0-C4FCB97C6054</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>0600A674-3906-8AED-4FC9-051AE5D2086E</segment>
+<tableSpace>15A5BC4A-A42F-D9F0-F24A-A7C4A0CCBCC2</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<inMemory>NO</inMemory>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="PAYMENT_ID" id="125F1CFC-6176-DD23-7FDF-49CDF6DABA20">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="PAYMENT_DATE" id="3F8DBEAB-EA3C-BF9B-1A64-7DA8C7D6F114">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="CAR_LOAN_ID" id="CD9FF909-6C3D-2B2D-50E9-442A9D7D3E99">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PAYMENT_AMOUNT" id="EF00B836-3F9B-EC5F-E429-D50CA4197D18">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:39 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_PAYMENTS_CAR_LOAN" id="BF962A90-B580-F328-A200-A78E64777481">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:42 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="PAYMENTS_PK" id="96C1620A-8805-04BE-E89E-F79C9909D0FB">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-13 14:46:41 UTC</createdTime>
+<ownerDesignName>CarDealership-ERD</ownerDesignName>
+<schemaObject>9D10007A-ABC2-DCEB-53A0-C4FCB97C6054</schemaObject>
+<segment>3B94EBA9-A816-AD7E-0D57-47BF7EABF0ED</segment>
+<tableSpace>15A5BC4A-A42F-D9F0-F24A-A7C4A0CCBCC2</tableSpace>
+<indexSegment>3B94EBA9-A816-AD7E-0D57-47BF7EABF0ED</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev12c>

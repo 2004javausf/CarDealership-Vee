@@ -53,9 +53,9 @@ public class CarDAOImpl implements CarDAO {
 		String sql=null;
 		
 		
-		sql = "SELECT CAR.CAR_ID,CAR.CAR_MAKE,CAR.CAR_MODEL,CAR.CAR_YEAR,CAR.CAR_COLOR,CAR_TYPE.CAR_TYPE_DESC FROM CAR" + 
-				"JOIN CAR_TYPE" + 
-				"ON CAR.CAR_TYPE_ID=CAR_TYPE.CAR_TYPE_ID" + 
+		sql = "SELECT CAR.CAR_ID,CAR.CAR_MAKE,CAR.CAR_MODEL,CAR.CAR_YEAR,CAR.CAR_COLOR,CAR_TYPE.CAR_TYPE_DESC FROM CAR " + 
+				"JOIN CAR_TYPE " + 
+				"ON CAR.CAR_TYPE_ID=CAR_TYPE.CAR_TYPE_ID " + 
 				"WHERE CAR.CAR_STATUS='OWNED' AND CAR.CUSTOMER_ID="+customerID;
 		
 		ResultSet rs = stmt.executeQuery(sql);
@@ -123,7 +123,7 @@ public class CarDAOImpl implements CarDAO {
 		ResultSet rs = stmt.executeQuery(sql);
 		Offers o = null;
 		while(rs.next()) {
-			o=new Offers(rs.getLong(1),rs.getLong(2),rs.getLong(3),rs.getFloat(4),rs.getString(5),rs.getFloat(6),rs.getFloat(7),rs.getInt(8));
+			o=new Offers(rs.getLong(1),rs.getLong(2),rs.getLong(3),rs.getFloat(4),rs.getString(5),rs.getFloat(6),rs.getFloat(7),rs.getInt(9));
 			offersList.add(o);
 		}
 		
@@ -164,11 +164,11 @@ public class CarDAOImpl implements CarDAO {
 		call.setLong(2, carID);
 		call.setLong(3, customerID);
 		call.setInt(4, months);
-		call.setFloat(5, (float)Math.round((offerAmount*100.0)/100.0));
-		call.setFloat(6, (float)Math.round((downPayment*100.0)/100.0));
-		call.setFloat(7, (float)Math.round((loanAmount*100.0)/100.0));
+		call.setFloat(5, offerAmount);
+		call.setFloat(6, downPayment);
+		call.setFloat(7, loanAmount);
 		call.setFloat(8, interestRate);
-		call.setFloat(9, (float)Math.round((mPayments*100.0)/100.0));
+		call.setFloat(9, mPayments);
 		
 		call.execute();
 		
@@ -180,7 +180,7 @@ public class CarDAOImpl implements CarDAO {
 		Statement stmt = conn.createStatement();
 		String sql=null;
 		
-		sql = "SELECT CAR_LOAN_ID,LOAN_MNTHLY_PAYMENT,LOAN_BALANCE FROM CAR_LOAN"+
+		sql = "SELECT CAR_LOAN_ID,LOAN_MONTHLY_PAYMENT,LOAN_BALANCE FROM CAR_LOAN "+
 		"WHERE CAR_ID="+carID;
 		
 		ResultSet rs = stmt.executeQuery(sql);
@@ -284,12 +284,12 @@ public class CarDAOImpl implements CarDAO {
 			p=new Payments(rs.getLong(1),rs.getLong(2),rs.getFloat(3),rs.getString(4));
 			pList.add(p);
 		}
-		System.out.println("PAYMENT ID\tLOAN_ID\tAMOUNT\tDATE");
+		System.out.println("PAYMENT_ID\tLOAN_ID\t\tAMOUNT\t\tDATE");
 		System.out.println("-------------------------------------------------------------------------------------------------------------------------");
 		for(int i=0;i<pList.size();i++) {
-			System.out.println(pList.get(i).getPaymentID()+"\t"
-					+pList.get(i).getCarLoanID()+"\t"
-					+pList.get(i).getPaymentAmount()+"\t"
+			System.out.println(pList.get(i).getPaymentID()+"\t\t"
+					+pList.get(i).getCarLoanID()+"\t\t"
+					+pList.get(i).getPaymentAmount()+"\t\t"
 					+pList.get(i).getPaymentDate());
 		}
 		
@@ -301,7 +301,7 @@ public class CarDAOImpl implements CarDAO {
 		Statement stmt = conn.createStatement();
 		String sql=null;
 		
-		sql = "SELECT CAR.CAR_MAKE,CAR.CAR_MODEL,CAR.CAR_YEAR,CAR.CAR_COLOR,CAR_LOAN.LOAN_AMOUNT,CAR_LOAN.LOAN_PAID,CAR_LOAN.LOAN_BALANCE,CAR_LOAN.LOAN_PAYMENT_LEFT FROM CAR " + 
+		sql = "SELECT CAR.CAR_MAKE,CAR.CAR_MODEL,CAR.CAR_YEAR,CAR.CAR_COLOR,CAR_LOAN.LOAN_TOTAL_AMOUNT,CAR_LOAN.LOAN_PAID,CAR_LOAN.LOAN_BALANCE,CAR_LOAN.LOAN_PAYMENT_LEFT FROM CAR " + 
 			  "JOIN CAR_LOAN " + 
 			  "ON CAR.CAR_ID=CAR_LOAN.CAR_ID " + 
 			  "WHERE CAR.CUSTOMER_ID="+customerID;
@@ -309,23 +309,69 @@ public class CarDAOImpl implements CarDAO {
 		ResultSet rs = stmt.executeQuery(sql);
 		Car c = null; 
 		CarLoan cl=null;
-		System.out.println("Make\tModel\tYear\tColor\tLoan Amount\tPaid\tBalance\tPaymentsLeft");
+		System.out.println("Make\tModel\tYear\tColor\tLoan Amount\t\tPaid\t\tBalance\tPaymentsLeft");
 		System.out.println("---------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 		while(rs.next()) {
 			c=new Car(rs.getString(1), rs.getString(2),rs.getInt(3),rs.getString(4));
 			cl=new CarLoan(rs.getFloat(5),rs.getFloat(6),rs.getInt(8),rs.getFloat(7));
-			System.out.println(c.getCarMake()+"\t"+c.getCarModel()+"\t"+c.getCarYear()+"\t"+c.getCarColor()+"\t"+cl.getLoanAmount()+"\t"+cl.getLoanPaid()+"\t"+cl.getLoanBalance()+"\t"+cl.getPaymmentsLeft());
+			System.out.println(c.getCarMake()+"\t"+c.getCarModel()+"\t"+c.getCarYear()+"\t"+c.getCarColor()+"\t"+cl.getTotalAmount()+"\t\t"+cl.getLoanPaid()+"\t\t"+cl.getLoanBalance()+"\t"+cl.getPaymmentsLeft());
 		}
 		
 	}
 
 	
-	
-	
-	
-	
-	
-	
+	public float monthlyPayment(float loanAmount,float interestRate,int months) throws SQLException {
+		int y = months/12;
+		float mPayment;
+		
+		mPayment = (loanAmount+((loanAmount*interestRate*y)/100))/(months);
+
+		System.out.println(mPayment);
+		
+		mPayment=(float) mPayment;
+		return mPayment;
+	}
+
+	@Override
+	public int isCarLotEmpty() throws SQLException {
+		Connection conn=cf.getConnection();
+		
+		Statement stmt = conn.createStatement();
+		String sql=null;
+		
+		sql = "SELECT * FROM CAR_LOT";
+		
+		ResultSet rs = stmt.executeQuery(sql);
+		int count=0;
+		Car c = null; 
+		while(rs.next()) {
+			c=new Car(rs.getLong(1));
+			count++;
+		}
+		
+		return count;
+		
+	}
+
+	@Override
+	public int isOfferPlacedAlready(long carID, long customerID) throws SQLException {
+		Connection conn=cf.getConnection();
+		
+		Statement stmt = conn.createStatement();
+		String sql=null;
+		
+		sql = "SELECT OFFER_ID FROM OFFERS WHERE CAR_ID="+carID+" AND CUSTOMER_ID="+customerID;
+		
+		ResultSet rs = stmt.executeQuery(sql);
+		int count=0;
+		Offers o = null; 
+		while(rs.next()) {
+			o=new Offers(rs.getLong(1));
+			count++;
+		}
+		
+		return count;
+	}
 	
 
 }

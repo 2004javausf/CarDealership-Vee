@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="49674A96-C75B-4373-7AEF-A6C149C09E16" mainViewID="3664C9D1-2B4E-0D8B-DEBA-112EC255B105">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-15 04:59:00 UTC</createdTime>
+<ownerDesignName>DriveEASY-CarDealershipApp-ERD</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

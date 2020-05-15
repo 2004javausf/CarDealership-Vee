@@ -16,6 +16,7 @@ public class EmployeeServices {
 	Validator v = new Validator();
 	static Scanner in = new Scanner(System.in);
 	static Scanner st = new Scanner(System.in);
+	static String uName;
 	
 	public void addEmployee() {
 		String firstName;
@@ -62,7 +63,7 @@ public class EmployeeServices {
 	
 	public static void employeeLogin() {
 		UserDAOImpl udi = new UserDAOImpl();
-		String uName;
+		
 		String password;
 		Menu menu = new Menu();
 		List<User> userList = new ArrayList<User>();
@@ -158,21 +159,25 @@ public class EmployeeServices {
 		try {
 			offersList=carDI.getPendingOffers();
 			int i=0;
+			int t;
 			long cid;
 			boolean b=false;
 			do {
+				t=i;
 				o = offersList.get(i);
 				cid=o.getCarID();
 				carDI.getCarInfo(o.getCarID());
-				System.out.println("\nNo.\tPrice\tCustonmer ID");
+				System.out.println("\nNo.\tPrice\t\tCustomer ID");
 				int j=1;
 				do {
-					System.out.println("["+j+"]\t"+offersList.get(i).getOfferAmount()+"\t"+offersList.get(i).getCustomerID());
+					System.out.println("["+j+"]\t"+offersList.get(i).getOfferAmount()+"\t\t"+offersList.get(i).getCustomerID());
 					i++;
 					j++;
 					if(i<offersList.size()) {
 						b=(offersList.get(i).getCarID()==cid);
 					}
+					else 
+						b=false;
 				}while( b == true);
 				
 				System.out.println("\n\nDo you want to accept any offer from above list? \n[1] YES\n[2] NO \n Enter the number [1-2]: ");
@@ -184,7 +189,7 @@ public class EmployeeServices {
 					System.out.println("\n\nWhich Offer you want to accept for the above car?");
 					System.out.print("Enter the number [1-"+(j-1)+"]: ");
 					oid=in.nextInt();
-					o = offersList.get(oid-1);
+					o = offersList.get((oid+t)-1);
 									
 					creditScore=cdi.getCreditScore(o.getCustomerID());
 					
@@ -198,9 +203,10 @@ public class EmployeeServices {
 						interestRate = (float) 5.17;
 					else
 						interestRate = (float) 4.23;
-					
-					monthlyPayments=monthlyPayment(o.getLoanAmount(),interestRate,o.getLoanMonths());
+					System.out.println(o.getLoanAmount()+"\t\t"+interestRate+o.getLoanMonths());
+					monthlyPayments=carDI.monthlyPayment(o.getLoanAmount(),interestRate,o.getLoanMonths());
 					carDI.acceptOffer(o.getOfferID(), o.getCarID(), o.getCustomerID(),o.getOfferAmount(),o.getDownPayment(),o.getLoanAmount(),o.getLoanMonths(),interestRate,monthlyPayments);
+					System.out.println("Car offer accepted successfully!!!!");
 					break;
 					
 				case 2:
@@ -219,24 +225,25 @@ public class EmployeeServices {
 		
 	}
 	
-	public static float monthlyPayment(float loanAmount,float interestRate,int months) {
-		int y = months/12;
-		float mPayment;
-		mPayment = (loanAmount+((loanAmount*interestRate*y)/100))/(months);
-		mPayment=(float) Math.round((mPayment*100.0)/100.0);
-		return mPayment;
-	}
 	
 	public static void removeCar() {
 		
-		CarDAOImpl carDI = new CarDAOImpl();
-		long carID;
-		
-		System.out.print("Enter CAR ID for the car you want to remove: ");
-		carID=in.nextLong();
-		
 		try {
-			carDI.removeCar(carID);
+			
+			CarDAOImpl carDI = new CarDAOImpl();
+			long carID;
+			int count;
+			count=carDI.isCarLotEmpty();
+			if(count==0) {
+				System.out.println("Car Lot is Empty");
+			}
+			else {
+				System.out.print("Enter CAR ID for the car you want to remove: ");
+				carID=in.nextLong();
+		
+				carDI.removeCar(carID);
+				System.out.println("Car removed from lot successfully");
+			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

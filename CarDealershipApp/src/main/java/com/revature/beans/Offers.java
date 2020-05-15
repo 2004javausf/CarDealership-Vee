@@ -17,8 +17,11 @@ public class Offers {
 		// TODO Auto-generated constructor stub
 	}
 	
-	
-	
+	public Offers(long offerID) {
+		super();
+		this.offerID = offerID;
+	}
+
 	public Offers(long offerID, long carID, long customerID, float offerAmount, String offerStatus, float downPayment,
 			float loanAmount, int loanMonths) {
 		super();
@@ -31,8 +34,6 @@ public class Offers {
 		this.loanAmount = loanAmount;
 		this.loanMonths = loanMonths;
 	}
-
-
 
 	public Offers(long offerID, long carID, long customerID, float offerAmount, String offerStatus, float downPayment,
 			float loanAmount, long loanID, int loanMonths) {

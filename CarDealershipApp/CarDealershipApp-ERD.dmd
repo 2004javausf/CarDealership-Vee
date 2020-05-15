@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="DriveEASY-CarDealershipApp-ERD" id="1ECB561A-B71F-B3B3-2BAE-4EE0F46DCE94" version="3.5">
+<createdBy>Jimmy</createdBy>
+<createdTime>2020-05-15 04:59:00 UTC</createdTime>
+<ownerDesignName>DriveEASY-CarDealershipApp-ERD</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>1ECB561A-B71F-B3B3-2BAE-4EE0F46DCE94</designId>
+</OSDM_Design>
